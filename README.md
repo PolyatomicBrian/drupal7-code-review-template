@@ -7,6 +7,9 @@ There are no silver bullets when it comes to performing a code review. The
 best results are produced when a variety of methods are employed by a skilled
 reviewer.
 
+This project is sponsored by the [School of Arts and Sciences][2] at the
+[University of Pennsylvania][1]
+
 
 ## What's Included
 
@@ -33,7 +36,5 @@ This is the general process for getting started.
 - todo
 
 
-## References
-
-These references should be consulted when performing a Drupal 7 module code review.
-
+[1]: http://www.upenn.edu
+[2]: http://www.sas.upenn.edu
