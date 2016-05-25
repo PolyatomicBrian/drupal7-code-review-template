@@ -20,7 +20,8 @@ This project is sponsored by the [School of Arts and Sciences][2] at the
 
 - Docs
 
-    Project and related documentation lives here.
+    - Project documentation
+    - Drupal module threat modeling
 
 - Example review
 
