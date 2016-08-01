@@ -8,7 +8,7 @@ The tools we'll be using are:
 Our setup requires Apache, PHP, and a database (MySQL or SQLite).
 
 
-## Setting Up Our Environment
+## Setting Up Your Environment
 
 [Environment Setup](setup)
  
