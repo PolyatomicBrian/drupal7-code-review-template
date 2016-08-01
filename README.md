@@ -21,7 +21,7 @@ This project is sponsored by the [School of Arts and Sciences][2] at the
 - Docs
 
     - Project documentation
-    - Drupal module threat modeling
+    - Drupal threat modeling
 
 - Example review
 
