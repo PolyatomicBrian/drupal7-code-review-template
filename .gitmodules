@@ -1,0 +1,3 @@
+[submodule "scripts/drupal-static-review"]
+	path = scripts/drupal-static-review
+	url = git@gitlab.sas.upenn.edu:infosec/drupal-static-review.git
