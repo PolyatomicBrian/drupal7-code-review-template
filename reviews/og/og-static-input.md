@@ -7,6 +7,8 @@ Search type: input
 
 - Found: _GET in /og_ui/og_ui.admin.inc
 
+    431 view->override_url = $_GET['q'];
+
 ## _REQUEST
 
 - Found: _REQUEST in /og.install
