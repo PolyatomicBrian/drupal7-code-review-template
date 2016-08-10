@@ -38,7 +38,7 @@ Things to look for:
 - If there is an admin menu is it properly protected?
 
 
-## Code Review Notes 
+## Code Review Notes
 
-Make any notes here.
-
+Plugins consist of various 1 or 2 function files and some classes to use functionality
+of other modules. Form alterations exist, but are secure.
