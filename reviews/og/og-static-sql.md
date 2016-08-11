@@ -5,13 +5,15 @@ Search for query and mysql
 - mysql: Found Occurrences, 0 
 - query: Found Occurrences, 110 usages found
 
+## query
 
-## Usage in comments (20 usages found)
+### Usage in comments (20 usages found)
 
 We don't care about these but are including for completeness.
 
 
-## Unclassified occurrence  (30 usages found)
+### Unclassified occurrence  (30 usages found)
+
 ```
 og/includes/migrate  (1 usage found)
     og.migrate.inc  (1 usage found)
@@ -66,7 +68,7 @@ og/og_ui/includes/migrate/7000  (4 usages found)
 ```
 
 
-## Usage in string constants (60 usages found)
+### Usage in string constants (60 usages found)
 
 ```
 og  (20 usages found)

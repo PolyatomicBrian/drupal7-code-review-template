@@ -11,11 +11,15 @@ Search type: input
 
 ## _REQUEST
 
+TODO: update using find method
+
 - Found: _REQUEST in /og.install
 - Found: _REQUEST in /og.module
-+ Found: _REQUEST in /og_ui/og_ui.pages.inc
+- Found: _REQUEST in /og_ui/og_ui.pages.inc
 
 ## $form_state
+
+TODO: update using find method
 
 - Found: $form_state in /og_access/og_access.module
 - Found: $form_state in /includes/og.admin.inc
