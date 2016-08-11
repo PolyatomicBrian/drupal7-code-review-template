@@ -32,9 +32,10 @@ subscribers communicate amongst themselves.
 
 ## Attack Surface
 
-- Input: og-static-input.txt
-- SQL: og-static-sql.txt
-- Full: og-static-full.txt
+- Input: og-static-input.md
+- Sanitization: og-static-sanitization.md
+- SQL: og-static-sql.md
+
 
 ## Security Controls
 
