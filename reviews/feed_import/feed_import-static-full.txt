@@ -1,0 +1,40 @@
+Static Report for feed_import
+Search type: full
+==================================================
+
+
+= File: feed_import.module
+========================================
+
+Found: check_plain in /feed_import.module
+
+
+= File: feed_import_base.module
+========================================
+
+Found: query in /feed_import_base/feed_import_base.module
+
+
+= File: feed_import_default_filters.php
+========================================
+
+Found: query in /feed_import_base/filters/feed_import_default_filters.php
+
+
+= File: feed_import_filter.inc
+========================================
+
+Found: eval in /feed_import_base/inc/feed_import_filter.inc
+
+
+= File: feed_import_readers.inc
+========================================
+
+Found: query in /feed_import_base/inc/feed_import_readers.inc
+
+
+= File: feed_import_abstract.inc
+========================================
+
+Found: eval in /feed_import_base/inc/feed_import_abstract.inc
+

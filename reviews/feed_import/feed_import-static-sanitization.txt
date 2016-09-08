@@ -1,0 +1,76 @@
+Static Report for feed_import
+Search type: sanitization
+==================================================
+
+
+= File: feed_import.css
+========================================
+
+Found: t in /feed_import.css
+
+
+= File: feed_import.js
+========================================
+
+Found: t in /feed_import.js
+
+
+= File: feed_import.module
+========================================
+
+Found: t in /feed_import.module
+
+
+= File: feed_import_base.module
+========================================
+
+Found: t in /feed_import_base/feed_import_base.module
+
+
+= File: feed_import_base.install
+========================================
+
+Found: t in /feed_import_base/feed_import_base.install
+
+
+= File: feed_import_base.drush.inc
+========================================
+
+Found: t in /feed_import_base/feed_import_base.drush.inc
+
+
+= File: feed_import_default_filters.php
+========================================
+
+Found: t in /feed_import_base/filters/feed_import_default_filters.php
+
+
+= File: feed_import_merge.inc
+========================================
+
+Found: t in /feed_import_base/inc/feed_import_merge.inc
+
+
+= File: feed_import_filter.inc
+========================================
+
+Found: t in /feed_import_base/inc/feed_import_filter.inc
+
+
+= File: feed_import_readers.inc
+========================================
+
+Found: t in /feed_import_base/inc/feed_import_readers.inc
+
+
+= File: feed_import.inc
+========================================
+
+Found: t in /feed_import_base/inc/feed_import.inc
+
+
+= File: feed_import_abstract.inc
+========================================
+
+Found: t in /feed_import_base/inc/feed_import_abstract.inc
+
