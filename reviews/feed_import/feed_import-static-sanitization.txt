@@ -2,75 +2,45 @@ Static Report for feed_import
 Search type: sanitization
 ==================================================
 
-
-= File: feed_import.css
-========================================
-
-Found: t in /feed_import.css
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1475
+'field_name' => check_plain($name),
 
 
-= File: feed_import.js
-========================================
-
-Found: t in /feed_import.js
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1781
+'#title' => check_plain($field),
 
 
-= File: feed_import.module
-========================================
-
-Found: t in /feed_import.module
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1805
+'#title' => check_plain($field),
 
 
-= File: feed_import_base.module
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module
+=== 
 
-Found: t in /feed_import_base/feed_import_base.module
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module
+=== 
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.drush.inc
+=== 
 
-= File: feed_import_base.install
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.install
+=== 
 
-Found: t in /feed_import_base/feed_import_base.install
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php
+=== 
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc
+=== 
 
-= File: feed_import_base.drush.inc
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_merge.inc
+=== 
 
-Found: t in /feed_import_base/feed_import_base.drush.inc
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import.inc
+=== 
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc
+=== 
 
-= File: feed_import_default_filters.php
-========================================
-
-Found: t in /feed_import_base/filters/feed_import_default_filters.php
-
-
-= File: feed_import_merge.inc
-========================================
-
-Found: t in /feed_import_base/inc/feed_import_merge.inc
-
-
-= File: feed_import_filter.inc
-========================================
-
-Found: t in /feed_import_base/inc/feed_import_filter.inc
-
-
-= File: feed_import_readers.inc
-========================================
-
-Found: t in /feed_import_base/inc/feed_import_readers.inc
-
-
-= File: feed_import.inc
-========================================
-
-Found: t in /feed_import_base/inc/feed_import.inc
-
-
-= File: feed_import_abstract.inc
-========================================
-
-Found: t in /feed_import_base/inc/feed_import_abstract.inc
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc
+=== 
 

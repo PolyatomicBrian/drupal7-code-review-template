@@ -2,39 +2,325 @@ Static Report for feed_import
 Search type: full
 ==================================================
 
-
-= File: feed_import.module
-========================================
-
-Found: check_plain in /feed_import.module
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 518
+'query' => array(
 
 
-= File: feed_import_base.module
-========================================
-
-Found: query in /feed_import_base/feed_import_base.module
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 521
+'#description' => t('This SQL query must extract desired information for import. Use ? or :param_name as placeholder for params.'),
 
 
-= File: feed_import_default_filters.php
-========================================
-
-Found: query in /feed_import_base/filters/feed_import_default_filters.php
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 527
+'#description' => t('Params will be binded to query. Use one param per line.') . ' ' .
 
 
-= File: feed_import_filter.inc
-========================================
-
-Found: eval in /feed_import_base/inc/feed_import_filter.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1131
+if (!empty($form_state['values']['machine_name'])) {
 
 
-= File: feed_import_readers.inc
-========================================
-
-Found: query in /feed_import_base/inc/feed_import_readers.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1132
+if (is_numeric($form_state['values']['machine_name']) ||
 
 
-= File: feed_import_abstract.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1133
+is_numeric($form_state['values']['machine_name'][0])) {
 
-Found: eval in /feed_import_base/inc/feed_import_abstract.inc
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1143
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1181
+if (isset($form_state['values']['name'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1182
+$default = $form_state['values']['options'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1183
+$sn = $form_state['values']['name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1184
+unset($form_state['values']['options'], $form_state['input']['options']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['input'] at line: 1184
+unset($form_state['values']['options'], $form_state['input']['options']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1273
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1475
+'field_name' => check_plain($name),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1491
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['input'] at line: 1516
+$val = isset($form_state['input']["field|$f"])
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['input'] at line: 1517
+? $form_state['input']["field|$f"]
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1650
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1754
+if (isset($form_state['values'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1759
+if (!empty($form_state['values']['table_content'][$field])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1760
+foreach ($form_state['values']['table_content'][$field] as &$filter) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1781
+'#title' => check_plain($field),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1805
+'#title' => check_plain($field),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1844
+foreach ($form_state['values']['table_content'][$field] as $key => &$filter) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1846
+unset($form_state['values']['table_content'][$field][$key]);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1850
+if (!empty($form_state['values']['table_content'][$field])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1852
+usort($form_state['values']['table_content'][$field], 'feed_import_sort_filter_by_weight');
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 1863
+$values = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2039
+$fv = &$form_state['values']['fields'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2064
+$fv = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2174
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2357
+$code = trim($form_state['values']['code']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2374
+'name' => $form_state['values']['name'],
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2375
+'machine_name' => $form_state['values']['machine_name'],
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2378
+if ($code = feed_import_import_feed_from_json($form_state['values']['code'], $options)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2532
+if (!($feed = FeedImport::loadFeed($form_state['values']['machine_name']))) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2535
+FeedImport::deleteFeed($feed, (bool) $form_state['values']['hashes']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2544
+if (empty($form_state['values'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module eval at line: 2545
+drupal_set_message(t('Dynamic filter functions are created using eval() which can be dangerous for import!'), 'warning');
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module eval at line: 2557
+t('Ok, eval() can be generally dangerous, but Feed Import assumes that access is enabled only for administrator.') .
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2574
+$fv = &$form_state['values']['fields'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2597
+$fv = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2670
+$v = &$form_state['values'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module $form_state['values'] at line: 2799
+if ($element['#value'] && $form_state['values']['options']['skip_imported']) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module query at line: 315
+$name = db_query('SELECT value FROM {variable} WHERE name=:name', array(
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module $form_state['values'] at line: 479
+if (!is_numeric($form_state['values'][$field])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module $form_state['values'] at line: 485
+if (!preg_match("/^[0-2][0-9]:[0-5][0-9]$/", $form_state['values']['feed_import_interval_start'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module $form_state['values'] at line: 489
+if (!preg_match("/^[0-2][0-9]:[0-5][0-9]$/", $form_state['values']['feed_import_interval_stop'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module $form_state['values'] at line: 494
+if ($form_state['values']['feed_import_interval_stop'] < $form_state['values']['feed_import_interval_start']) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.drush.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.install
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 498
+$query = new EntityFieldQuery();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 499
+$query = $query->entityCondition('entity_type', 'taxonomy_vocabulary')
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 502
+if (empty($query)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 506
+$query = reset($query['taxonomy_vocabulary']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 507
+$vids[$name] = $query->vid;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 508
+unset($query);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 531
+$query = new EntityFieldQuery();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 532
+$query->entityCondition('entity_type', 'taxonomy_term');
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 533
+$query->propertyCondition('name', $name);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 535
+$query->propertyCondition('vid', $voc);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 537
+$query = $query->execute();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 538
+if (empty($query)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 542
+return array_keys($query['taxonomy_term']);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc eval at line: 171
+* Creates a function dynamically. Warning! This uses eval!
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc eval at line: 196
+// Create PHP code for eval.
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc eval at line: 206
+$created = eval($code);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_merge.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc eval at line: 174
+// Bool, see DomXPath::evaluate
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc eval at line: 181
+$values = $this->xpath->evaluate($path, $item, $this->xpathRegisterNodeNS);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 246
+$this->items = $this->xpath->query($this->options['parent']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 467
+// Require dsn and query.
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 468
+if (empty($this->options['dsn']) || empty($this->options['query'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 505
+// Prepare query.
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 507
+$this->options['query'],
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 511
+// Execute query
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc
+=== 
 
