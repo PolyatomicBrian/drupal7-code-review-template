@@ -18,8 +18,8 @@ Last SA Update: Unsure
 
 ## Module Description
 
-Feed Import allows to import content into entities (like nodes, users, taxonomy terms, ...)
-from various file or database types.
+Feed Import allows to import content into entities (like nodes, users, taxonomy
+terms, ...) from various file or database types.
 
 Also can monitor feed items for changes to update imported entities,
 can set an expire time to entities to deleted expired ones when cron runs
@@ -46,5 +46,9 @@ Things to look for:
 
 ## Code Review Notes
 
-Plugins consist of various 1 or 2 function files and some classes to use functionality
-of other modules. Form alterations exist, but are secure.
+Removing use of eval.
+
+Plugins consist of various 1 or 2 function files and some classes to use
+functionality of other modules. Form alterations exist, but are secure.
+
+
