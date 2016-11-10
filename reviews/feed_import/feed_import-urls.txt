@@ -1,0 +1,194 @@
+URL List
+--------
+
+FEED_IMPORT_PATH, 'admin/config/services/feed_import'
+
+/
+/add
+/import
+/process/%feed_import
+/export/%feed_import
+/delete/%feed_import
+/edit/%feed_import/feed
+/edit/%feed_import/feed/feed
+/edit/%feed_import/feed/processor
+/edit/%feed_import/feed/hashmanager
+/edit/%feed_import/source
+/edit/%feed_import/fields
+/edit/%feed_import/fields/fields
+/edit/%feed_import/fields/reorder
+/edit/%feed_import/fields/static
+/edit/%feed_import/filters
+/edit/%feed_import/filters/filters
+/edit/%feed_import/filters/prefilters
+/edit/%feed_import/filters/functions
+/edit/%feed_import/filters/settings
+
+
+URL Details
+-----------
+
+  // This is used for arguments to know the position.
+  $submenus = substr_count(FEED_IMPORT_PATH, '/');
+
+  $feedarg = $submenus + 2;
+
+  $items[FEED_IMPORT_PATH] = array(
+    'title' => 'Feed Import',
+    'description' => 'Configure feed import',
+    'page callback' => 'feed_import_list_feeds',
+    'type' => MENU_NORMAL_ITEM,
+
+  $items[FEED_IMPORT_PATH . '/add']
+    'title' => 'Add feed',
+    'description' => 'Adds a new feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_feed_form'),
+    'type' => MENU_LOCAL_ACTION,
+
+  $items[FEED_IMPORT_PATH . '/import']
+    'title' => 'Import feed',
+    'description' => 'Imports a feed from JSON code',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_import_feed_form'),
+    'type' => MENU_LOCAL_ACTION,
+
+  $items[FEED_IMPORT_PATH . '/process/%feed_import']
+    'title' => 'Process feed',
+    'page callback' => 'feed_import_process_feed',
+    'access callback' => 'user_access',
+    'access arguments' => array('feed import process'),
+    'page arguments' => array($feedarg),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items[FEED_IMPORT_PATH . '/export/%feed_import']
+    'title' => 'Export feed',
+    'page callback' => 'feed_import_export_feed',
+    'page arguments' => array($feedarg),
+    'type' => MENU_CALLBACK,
+
+  $items[FEED_IMPORT_PATH . '/delete/%feed_import']
+    'title' => 'Export feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_delete_feed_form', $feedarg),
+    'type' => MENU_CALLBACK,
+  )
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/feed']
+    'title' => 'Edit feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_feed_form', $feedarg),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/feed/feed']
+    'title' => 'Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_feed_form', $feedarg),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/feed',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/feed/processor']
+    'title' => 'Processor',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'feed_import_class_settings_form',
+      $feedarg,
+      'processor',
+      'Edit processor',
+    ),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/feed',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/feed/hashmanager']
+    'title' => 'Hash Manager',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'feed_import_class_settings_form',
+      $feedarg,
+      'hashes',
+      'Edit Hash Manager',
+    ),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/feed',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/source']
+    'title' => 'Edit source',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'feed_import_class_settings_form',
+      $feedarg,
+      'reader',
+      'Edit source',
+    ),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/fields']
+    'title' => 'Edit fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_fields_form', $feedarg),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/fields/fields']
+    'title' => 'Edit fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_fields_form', $feedarg),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/fields',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/fields/reorder']
+    'title' => 'Re-order fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_reorder_fields_form', $feedarg),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/fields',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/fields/static']
+    'title' => 'Edit static fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_static_fields_form', $feedarg),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/fields',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/filters']
+    'title' => 'Edit filters',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_filter_form', $feedarg, 'filters'),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/filters/filters']
+    'title' => 'Edit filters',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_filter_form', $feedarg, 'filters'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/filters',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/filters/prefilters']
+    'title' => 'Edit pre-filters',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_edit_filter_form', $feedarg, 'prefilters'),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/filters',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/filters/functions']
+    'title' => 'Dynamic filters',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_import_dynamic_func_form', $feedarg),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/filters',
+
+  $items[FEED_IMPORT_PATH . '/edit/%feed_import/filters/settings']
+    'title' => 'Filter settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'feed_import_class_settings_form',
+      $feedarg,
+      'filter',
+      'Filter settings',
+    ),
+    'type' => MENU_LOCAL_TASK,
+    'tab_parent' => FEED_IMPORT_PATH . '/edit/%/filters',

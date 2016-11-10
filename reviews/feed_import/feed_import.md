@@ -29,9 +29,10 @@ All settings can be made from an easy to use interface.
 
 ## Attack Surface
 
-- Input: feed_import-static-input.md
-- Sanitization: feed_import-static-sanitization.md
-- SQL: feed_import-static-sql.md
+- Input: feed_import-static-input.txt
+- Sanitization: feed_import-static-sanitization.txt
+- SQL: feed_import-static-sql.txt
+- URLs: feed_import-urls.txt
 
 
 ## Security Controls
