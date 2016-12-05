@@ -5,9 +5,9 @@
 
     Requested By: Jeff Lyons
     Reviewed By: Clay
-    Completed On: Nov XX, 2016
-    Updates:
-    Result: 
+    Completed On: Nov 21, 2016
+    Result: Uses PHP eval. Jeff is OK with not using this module.
+            He has an alternative solution.
     
 
 ## Project Information
@@ -28,14 +28,19 @@ block basis that disables the link from rendering in the title. This is
 useful for using the link elsewhere on the block template. This module
 provides the following variables to the $block object:
 
-$block->title_link: The path stored with each block.
-$block->title_link_title: The title attribute of the link. By default this is rendered as a "<a> title" attribute.
+$block->title_link:
+    
+- The path stored with each block.
 
+$block->title_link_title:
+
+- The title attribute of the link. By default this is rendered as a
+  ```"<a> title"``` attribute.
 
 
 ## Results & Summary
 
-TODO by reviewer
+PHP eval() is used by this module.
 
 ---
 
@@ -60,12 +65,18 @@ https://api.drupal.org/api/drupal/includes!common.inc/group/sanitization/7.x
 In order to identify most, if not all, of the following run the drupal static
 review scripts see gitlab:infosec/drupal-static-review for details.
 
+For details see block_titlelink-static-full.txt
+
 
 ### Install/Uninstall ###
 
 - If a table is created is it removed when the module is uninstalled?
+
+    NA
+    
 - Are global variables used?
 
+    Yes, uninstalls block_titlelink_%
 
 ### Arbitrary Code Execution ###
 
@@ -74,6 +85,8 @@ stop. Depending on the module, use-case, and need, we may patch the module and
 remove the dangerous functionality. Any patches will need to be fully tested.
 
 - Is eval() or php_eval() functions used?
+
+    Yes, ??? not sure why this is necessary
 
 - Is preg_replace being used?
 
