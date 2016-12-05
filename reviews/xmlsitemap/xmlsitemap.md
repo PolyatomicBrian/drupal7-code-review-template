@@ -3,7 +3,7 @@
 
 ## Review Metadata
 
-    Requested By: Ann
+    Requested By: Jeff Lyons
     Reviewed By: Clay, Tristan
     Completed On:
     Updates:
@@ -15,10 +15,11 @@
 Modules in alpha, beta, dev or any other release other than production will not
 be approved for use in production environments.
 
-Maintenance status: Actively maintained
-Development status: Under active development
-Module categories: Content Display, Theme Enhancements
-Reported installs: 29,670
+    Maintenance status: Seeking co-maintainer(s)
+    Development status: Maintenance fixes only
+    Module categories: Drush, Search, Third-party Integration, Utility
+    Reported installs: 300,805
+
 
 ## Description
 
