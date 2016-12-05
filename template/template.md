@@ -30,14 +30,108 @@ TODO by reviewer
 
 TODO by reviewer
 
----
 
-## General Items & Threat Model
+## Getting Started
 
-Below is a list of things to look for when performing a code review. Keep in
-mind that when performing a code review it's not only important to review and
-validate the correctness of existing code, it's also important to consider
-if security control or mechanism is not being implemented when it should be.
+The standard directory structure is as follows. Feel free to use your own
+directory structure. If you do, be sure any config files and paths are updated
+appropriately.
+
+Location of contrib modules being Reviewed
+
+    $HOME/projects/sas/drupal/drupal7/contrib
+
+Location of local repos
+
+    - $HOME/projects/sas/gitlab/infosec/drupal-static-review
+    - $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
+
+If you don't already have the drupal-static-review repo, clone it.
+
+    ```
+    cd $HOME/projects/sas/gitlab/infosec-docs
+    git clone https://github.com/clayball/drupal7-static-review.git
+    ```
+
+This example uses the xmlsitemap contrib module.
+
+*. Add a new review directory on a new local branch
+
+    ```
+    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
+    git checkout master
+    git pull origin master
+    git checkout -b xmlsitemap-$USER
+    cd reviews
+    mkdir xmlsitemap
+    cd xmlsitemap
+    cp ../../template/template.md xmlsitemap.md
+    ```
+    Update the template file with details for the contrib module under review.
+
+*. Review the module on drupal.org (metadata, issues)
+
+    This example uses xmlsitemap.
+
+    https://www.drupal.org/project/xmlsitemap
+
+    Note the 'Project Information'
+
+    Search and review all open bugs for version 7.x
+
+    https://www.drupal.org/project/issues/xmlsitemap?text=&status=Open&priorities=All&categories=1&version=7.x&component=All
+
+    Take a look at the various issues and when they were created and last
+    updated.
+
+    Narrow the search Priority from 'All' to 'Major'
+    
+    - Is there anything we should know about?
+
+    Narrow the search Priority from 'Major' to 'Critical'
+
+    - Is there anything we should know about?
+    - Note the number of issues and whether or not the issues would prevent the
+      module from passing review.
+
+*. Download and uncompress the contrib module
+
+    ```
+    cd $HOME/projects/sas/drupal/drupal7/contrib
+    wget https://ftp.drupal.org/files/projects/xmlsitemap-7.x-2.3.tar.gz
+    tar zxvf xmlsitemap-7.x-2.3.tar.gz
+    ```
+
+*. Run phploc on the contrib module directory
+
+    ```
+    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+    phploc --names=*.php,*.module,*.install,*.inc \
+      ~/projects/sas/drupal/drupal7/contrib/xmlsitemap/ \
+      --log-csv=xmlsitemap-loc.csv --log-xml=xmlsitemap-loc.xml > xmlsitemap-loc.txt
+    ```
+    The phploc command above will generate three files. We may use the various
+    formats at a later date, e.g., for importing into HECTOR.
+
+*. Run drupal-static-review and copy/move output to the review directory
+
+    ```
+    cd $HOME/projects/sas/gitlab/infosec/drupal-static-review
+    ./drupal-static-review xmlsitemap
+    mv reports/xmlsitemap-static-full.txt \
+      ~/projects/sas/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+    ```
+
+## Review Items & Threat Model
+
+Now it's time to install the module and try using it. I recommend doing this
+locally and integrating the Drupal installation with an IDE, e.g. PhpStorm.
+You should also install Xdebug and integrate it with PhpStorm.
+
+Below is a list of items to look for when performing a code review. Keep in
+mind that it's not only important to review and validate the correctness of
+existing code, it's also important to consider if a security control or
+mechanism is not being implemented when it should be.
 
 Feel free to remove this when the review is complete. However, this should
 remain as part of template.md.
