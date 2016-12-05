@@ -2,159 +2,1138 @@ Static Report for og
 Search type: input
 ==================================================
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.rules.inc
+=== 
 
-File: og.install
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.install _REQUEST at line: 13
+$field_name = OG_MEMBERSHIP_REQUEST_FIELD;
 
-Found: _REQUEST in /og.install
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.install
+=== 
 
-File: og.module
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.rules_defaults.inc
+=== 
 
-Found: _REQUEST in /og.module
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.api.php
+=== 
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.info.inc
+=== 
 
-File: og_access.module
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module _REQUEST at line: 75
+define('OG_MEMBERSHIP_REQUEST_FIELD', 'og_membership_request');
 
-Found: $form_state in /og_access/og_access.module
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 709
+function og_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
 
-File: og.admin.inc
-========================================
 
-Found: $form_state in /includes/og.admin.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 731
+function og_form_group_reference_validate($form, &$form_state) {
 
 
-File: og.field.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 734
+if (empty($form_state[$entity_type])) {
 
-Found: $form_state in /includes/og.field.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 762
+if (!empty($form_state['values'][$field_name][LANGUAGE_NONE])) {
 
-File: user_roles.action.inc
-========================================
 
-Found: $form_state in /includes/actions/user_roles.action.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 777
+function og_form_group_manager_validate($form, &$form_state) {
 
 
-File: set_state.action.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 780
+if (empty($form_state[$entity_type])) {
 
-Found: $form_state in /includes/actions/set_state.action.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 784
+$entity = $form_state[$entity_type];
 
-File: og_handler_field_og_membership_link_edit.inc
-========================================
 
-Found: $form_state in /includes/views/handlers/og_handler_field_og_membership_link_edit.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 785
+$langcode = $form_state['values']['language'];
 
 
-File: og_plugin_argument_default_user_groups.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 787
+if (!isset($form_state['values']['uid']) || !isset($entity->uid)) {
 
-Found: $form_state in /includes/views/handlers/og_plugin_argument_default_user_groups.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 792
+if (isset($form_state['values'][OG_GROUP_FIELD]) && empty($form_state['values'][OG_GROUP_FIELD][$langcode][0]['value'])) {
 
-File: og_handler_field_og_membership_link_delete.inc
-========================================
 
-Found: $form_state in /includes/views/handlers/og_handler_field_og_membership_link_delete.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 797
+if (!isset($form_state['values'][OG_GROUP_FIELD])) {
 
 
-File: og_plugin_argument_validate_group.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 815
+if (!$account = user_load_by_name($form_state['values']['name'])) {
 
-Found: $form_state in /includes/views/handlers/og_plugin_argument_validate_group.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og.module $form_state at line: 821
+$account = user_load($form_state['values']['uid']);
 
-File: og_test.module
-========================================
 
-Found: $form_state in /tests/og_test.module
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og.module
+=== 
 
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_access/og_access.api.php
+=== 
 
-File: generate-og-d6-content.php
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_access/og_access.install
+=== 
 
-+ Found: $form_state in /scripts/generate-og-d6-content.php
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_access/og_access.module $form_state at line: 423
+function og_access_form_og_ui_admin_settings_alter(&$form, &$form_state) {
 
 
-File: og_register.module
-========================================
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_access/og_access.module
+=== 
 
-Found: $form_state in /og_register/og_register.module
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 25
+function og_membership_type_form($form, &$form_state, $og_membership_type, $op = 'edit') {
 
 
-File: og_perm.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 49
+field_attach_form('og_membership_type', $og_membership_type, $form, $form_state);
 
-Found: $form_state in /plugins/access/og_perm.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 73
+function og_membership_type_form_validate($form, &$form_state) {
 
-File: og_member.inc
-========================================
 
-Found: $form_state in /plugins/access/og_member.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 74
+entity_form_field_validate('og_membership_type', $form, $form_state);
 
 
-File: node_create_links.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 80
+function og_membership_type_form_submit(&$form, &$form_state) {
 
-Found: $form_state in /plugins/content_types/node_create_links/node_create_links.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 81
+$og_membership_type = entity_ui_form_submit_build_entity($form, $form_state);
 
-File: og_context.admin.inc
-========================================
 
-Found: $form_state in /og_context/og_context.admin.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 84
+$form_state['redirect'] = 'admin/config/group/group-membership';
 
 
-File: og_context_plugin_argument_default_group_context.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 90
+function og_membership_type_form_submit_delete(&$form, &$form_state) {
 
-Found: $form_state in /og_context/includes/views/handlers/og_context_plugin_argument_default_group_context.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc $form_state at line: 91
+$form_state['redirect'] = 'admin/config/group/group-membership/manage/' . $form_state['og_membership_type']->name . '/delete';
 
-File: og_context_plugin_access_og_perm.inc
-========================================
 
-Found: $form_state in /og_context/includes/views/handlers/og_context_plugin_access_og_perm.inc
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.admin.inc
+=== 
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 25
+function og_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
-File: og_ui.module
-========================================
 
-+ Found: $form_state in /og_ui/og_ui.module
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 151
+$dummy_form_state = $form_state;
 
 
-File: og_ui.pages.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 152
+if (empty($form_state['rebuild'])) {
 
-+ Found: _REQUEST in /og_ui/og_ui.pages.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 276
+function og_complex_widget_element_validate($element, &$form_state, $form) {
 
-File: og_ui.admin.inc
-========================================
 
-- Found: _GET in /og_ui/og_ui.admin.inc
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 277
+$subform = drupal_array_get_nested_value($form_state['values'], $element['#array_parents']);
 
 
-File: og_ui_handler_area_og_membership_overview.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 302
+drupal_array_set_nested_value($form_state['values'], array_slice($element['#parents'], 0, -1), $ids, TRUE);
 
-- Found: $form_state in /og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc
 
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 306
+$subform = drupal_array_get_nested_value($form_state['values'], $element['#array_parents']);
 
-File: generate-og-ui-d6-content.php
-========================================
 
-+ Found: $form_state in /og_ui/scripts/generate-og-ui-d6-content.php
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 318
+function og_validate_widgets($form, &$form_state) {
 
 
-File: membership_links.inc
-========================================
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc $form_state at line: 339
+function og_complex_widget_after_build($form, &$form_state) {
 
-- Found: $form_state in /og_ui/plugins/content_types/membership_links/membership_links.inc
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.field.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og_features_permission.features.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.membership_type.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og_features_role.features.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.membership.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/og.exception.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/og.migrate.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7200/og_user_roles.migrate.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7200/og_og_membership.migrate.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7200/og_roles.migrate.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/plugins/destinations/og_membership.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_group.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_content.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_add_fields.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_ogur.migrate.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_user.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/migrate/7000/og_ogur_roles.migrate.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc $form_state at line: 58
+function og_user_roles_action_validate($form, $form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc $form_state at line: 59
+if (!$form_state['values']['add_roles'] && !$form_state['values']['remove_roles']) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc $form_state at line: 64
+function og_user_roles_action_submit($form, $form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc $form_state at line: 66
+'add_roles' => array_filter($form_state['values']['add_roles']),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc $form_state at line: 67
+'remove_roles' => array_filter($form_state['values']['remove_roles']),
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/user_roles.action.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/membership_delete.action.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/set_state.action.inc $form_state at line: 28
+function og_set_state_action_submit($form, $form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/set_state.action.inc $form_state at line: 29
+return array('state' => $form_state['values']['state']);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/actions/set_state.action.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/og.views.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/og.views_default.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_edit.inc $form_state at line: 27
+function options_form(&$form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_edit.inc $form_state at line: 40
+parent::options_form($form, $form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_edit.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_prerender_list.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_group_permissions.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_group_audience_state.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_user_roles.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_relationship_membership_roles.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_relationship.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_plugin_argument_default_user_groups.inc $form_state at line: 29
+function options_form(&$form, &$form_state) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_plugin_argument_default_user_groups.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_delete.inc $form_state at line: 27
+function options_form(&$form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_delete.inc $form_state at line: 40
+parent::options_form($form, $form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_field_og_membership_link_delete.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_plugin_argument_validate_group.inc $form_state at line: 26
+function options_form(&$form, &$form_state) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_plugin_argument_validate_group.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_filter_user_roles.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/includes/views/handlers/og_handler_filter_group_audience_state.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_field_access/og_field_access.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og-7.x-1.x.database.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/tests/drupal-6.og.database.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module $form_state at line: 72
+function og_test_form_alter(&$form, $form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module $form_state at line: 83
+function og_test_form_behavior_validate($element, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module $form_state at line: 84
+if ($form_state['values']['title'] != 'state-pending') {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module $form_state at line: 88
+$value = $form_state['values'][OG_AUDIENCE_FIELD];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module $form_state at line: 91
+form_set_value($element, $value, $form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/tests/og_test.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.rules_defaults.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.install
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.features.field_instance.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.pages_default.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.features.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/og_example.features.field_base.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/plugins/entityreference/selection/OgExampleSelectionHandler.class.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_example/plugins/entityreference/selection/og_example.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d7-content-update-7001.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 64
+$form_state['values']['status'][$module] = TRUE;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 66
+$form_state['values']['disabled_modules'] = $form['disabled_modules'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 67
+system_modules_submit(NULL, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 68
+unset($form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 75
+$form_state = array( 'values' => array() );
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 76
+$form_state['values']['name'] = 'test-group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 77
+$form_state['values']['type'] = 'test_group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 78
+$form_state['values']['og_content_type_usage'] = 'group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 79
+drupal_execute('node_type_form',$form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 81
+$form_state = array(  'values'=>array() );
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 82
+$form_state['values']['name'] = 'test-post-group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 83
+$form_state['values']['type'] = 'test_post_group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 84
+$form_state['values']['og_content_type_usage'] = 'group_post_standard';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php $form_state at line: 85
+drupal_execute('node_type_form',$form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/scripts/generate-og-d6-content.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module $form_state at line: 88
+function og_register_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module $form_state at line: 113
+function og_register_og_membership_state_validate($element, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module $form_state at line: 117
+if (empty($form_state['values'][$field_name][$langcode])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module $form_state at line: 124
+$values = $form_state['values'][$field_name][$langcode];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module $form_state at line: 133
+form_set_value($element, array($langcode => $values), $form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_register/og_register.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_is_node_group.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_perm.inc $form_state at line: 29
+function og_perm_ctools_access_settings($form, &$form_state, $conf) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_perm.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_is_node_group_content.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_member.inc $form_state at line: 28
+function og_member_ctools_access_settings($form, &$form_state, $conf) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/access/og_member.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc $form_state at line: 45
+function og_node_create_links_content_type_edit_form($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc $form_state at line: 46
+$conf = $form_state['conf'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc $form_state at line: 90
+function og_node_create_links_content_type_edit_form_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc $form_state at line: 91
+$form_state['conf']['field_name'] = $form_state['values']['field_name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc $form_state at line: 92
+$form_state['conf']['types'] = array_filter($form_state['values']['types']);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/content_types/node_create_links/node_create_links.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/relationships/og_membership_from_group_and_user.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/selection/OgSelectionHandler.class.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/selection/og.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/behavior/OgBehaviorHandler.class.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/behavior/og_behavior.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/behavior/og_widget.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/plugins/entityreference/behavior/OgWidgetHandler.class.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.admin.inc $form_state at line: 159
+function og_context_configure_form_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.admin.inc $form_state at line: 163
+$enabled_providers = $form_state['values'][$type]['enabled'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.admin.inc $form_state at line: 164
+$providers_weight = $form_state['values'][$type]['weight'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.admin.inc $form_state at line: 177
+$form_state['redirect'] = 'admin/config/group/context';
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.admin.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.install
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.api.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/og_context.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/includes/views/og_context.views.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/includes/views/handlers/og_context_plugin_argument_default_group_context.inc $form_state at line: 27
+function options_form(&$form, &$form_state) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/includes/views/handlers/og_context_plugin_argument_default_group_context.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/includes/views/handlers/og_context_plugin_access_og_perm.inc $form_state at line: 30
+function options_form(&$form, &$form_state) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_context/includes/views/handlers/og_context_plugin_access_og_perm.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module $form_state at line: 551
+function og_ui_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module $form_state at line: 777
+function og_ui_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module $form_state at line: 888
+function og_ui_form_node_type_form_alter(&$form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module $form_state at line: 957
+$target_type = !empty($form_state['values']['target_type']) ? $form_state['values']['target_type'] : key($group_content_options);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module $form_state at line: 992
+function og_node_type_form_settings(array $form, array &$form_state) {
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.api.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.install
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 125
+function og_ui_confirm_subscribe($form, &$form_state, $group_type, $gid, $account, $field_name) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 145
+$form_state['og_membership'] = $og_membership;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 146
+field_attach_form('og_membership', $og_membership, $form, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc _REQUEST at line: 148
+if ($state == OG_STATE_ACTIVE && !empty($form[OG_MEMBERSHIP_REQUEST_FIELD])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc _REQUEST at line: 150
+$form[OG_MEMBERSHIP_REQUEST_FIELD]['#access'] = FALSE;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 163
+function og_ui_confirm_subscribe_validate($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 165
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 166
+field_attach_form_validate('og_membership', $og_membership, $form, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 172
+function og_ui_confirm_subscribe_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 174
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 175
+field_attach_submit('og_membership', $og_membership, $form, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 178
+$group_type = $form_state['values']['group_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 179
+$gid = $form_state['values']['gid'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 192
+$form_state['redirect'] = $redirect;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 234
+function og_ui_confirm_unsubscribe($form, &$form_state, $group_type, $group) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 246
+function og_ui_confirm_unsubscribe_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 247
+$group_type = $form_state['values']['group_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 248
+$group = $form_state['values']['group'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 253
+$form_state['redirect'] = entity_uri($group_type, $group);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc $form_state at line: 256
+$form_state['redirect'] = '<front>';
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.pages.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 11
+function og_ui_admin_settings($form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 131
+function og_ui_add_users($form, &$form_state, $group_type, $gid) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 166
+$field_name = !empty($form_state['values']['field_name']) ? $form_state['values']['field_name'] : key($field_names);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 194
+$form_state['og_membership'] = $og_membership;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 202
+field_attach_form('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 216
+function og_ui_admin_add_user_ajax_callback(array $form, array &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 223
+function og_ui_add_users_validate($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 224
+$account = user_load_by_name($form_state['values']['name']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 225
+$group_type = $form_state['values']['group_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 226
+$gid = $form_state['values']['gid'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 227
+$field_name = $form_state['values']['field_name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 243
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 244
+field_attach_form_validate('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 251
+function og_ui_add_users_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 252
+$group_type = $form_state['values']['group_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 253
+$gid = $form_state['values']['gid'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 254
+$state = $form_state['values']['state'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 255
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 257
+field_attach_submit('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 258
+$account = user_load_by_name($form_state['values']['name']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 266
+if (!empty($form_state['values']['roles'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 267
+foreach ($form_state['values']['roles'] as $rid) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 279
+function og_ui_edit_membership($form, &$form_state, $group_type, $gid, $og_membership) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 318
+$form_state['og_membership'] = $og_membership;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 326
+field_attach_form('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 345
+function og_ui_edit_membership_validate($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 346
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 347
+field_attach_form_validate('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 353
+function og_ui_edit_membership_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 354
+$group_type = $form_state['values']['group_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 355
+$gid = $form_state['values']['gid'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 356
+$og_membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 357
+$og_membership->state = $form_state['values']['state'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 358
+field_attach_submit('og_membership', $og_membership, $form['membership_fields'], $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 364
+if (!in_array($rid, $form_state['values']['roles'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 368
+if (!empty($form_state['values']['roles'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 369
+foreach ($form_state['values']['roles'] as $rid) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 384
+function og_ui_delete_membership($form, &$form_state, $group_type, $gid, $og_membership) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 397
+$form_state['og_membership'] = $og_membership;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 411
+function og_ui_delete_membership_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 412
+$membership = $form_state['og_membership'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 414
+$form_state['redirect'] = 'group/' . $membership->group_type . '/' . $membership->gid . '/admin/people';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc _GET at line: 431
+$view->override_url = $_GET['q'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 477
+function og_ui_admin_roles($form, $form_state, $group_type = '', $gid = 0, $bundle = '', $rid = 0) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 559
+function og_ui_admin_roles_validate($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 560
+if (!empty($form_state['values']['name'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 567
+if (!empty($form_state['values']['rid'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 568
+$role = og_role_load($form_state['values']['rid']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 569
+$unique_name = $role->name != $form_state['values']['name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 571
+if ($unique_name && in_array($form_state['values']['name'], $roles)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 572
+form_set_error('name', t('The role name %name already exists. Please choose another role name.', array('%name' => $form_state['values']['name'])));
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 583
+function og_ui_admin_roles_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 589
+if (!empty($form_state['values']['rid'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 590
+$role = og_role_load($form_state['values']['rid']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 591
+$role->name = $form_state['values']['name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 594
+$role = og_role_create($form_state['values']['name'], $group_type, $gid, $bundle);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 596
+if ($form_state['values']['op'] == t('Save role')) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 600
+elseif ($form_state['values']['op'] == t('Add role')) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 604
+elseif ($form_state['values']['op'] == t('Delete role')) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 605
+og_role_delete($form_state['values']['rid']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 610
+$form_state['redirect'] = "group/$group_type/$gid/admin/roles";
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 613
+$form_state['redirect'] = 'admin/config/group/roles';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 615
+$form_state['redirect'] .= "/$group_type/$bundle";
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 712
+function og_ui_admin_permissions($form, $form_state, $group_type = '', $gid = 0, $bundle = '', $rid = 0) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 870
+function og_ui_admin_permissions_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 871
+foreach ($form_state['values']['role_names'] as $rid => $name) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 872
+og_role_change_permissions($rid, $form_state['values'][$rid]);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 921
+function og_ui_field_settings($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 951
+$selected_field_name = !empty($form_state['values']['field_type']) ? $form_state['values']['field_type'] : OG_AUDIENCE_FIELD;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1065
+function og_ui_admin_fields_ajax_callback($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1072
+function og_ui_field_settings_validate($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1073
+list($entity_type, $bundle) = explode(':', $form_state['values']['bundle']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1074
+$field_name = $form_state['values']['field_name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1076
+$og_field = og_fields_info($form_state['values']['field_type']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1105
+function og_ui_field_settings_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1106
+list($entity_type, $bundle) = explode(':', $form_state['values']['bundle']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1107
+$field_name = $form_state['values']['field_name'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1108
+$field_type = $form_state['values']['field_type'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1132
+function og_ui_field_delete_form($form, &$form_state, $instance) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1134
+$output = field_ui_field_delete_form($form, $form_state, $instance);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1144
+function og_ui_field_delete_form_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1146
+field_ui_field_delete_form_submit($form, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc $form_state at line: 1147
+$form_state['redirect'] = 'admin/config/group/fields';
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/og_ui.admin.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/migrate/7000/add_field.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/migrate/7000/populate_field.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/migrate/7000/set_roles.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/views/og_ui.views_default.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/views/og_ui.views.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc $form_state at line: 26
+function options_form(&$form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc $form_state at line: 27
+parent::options_form($form, $form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/tests/drupal-6.og-ui.database.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 55
+$form_state['values']['status'][$module] = TRUE;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 57
+$form_state['values']['disabled_modules'] = $form['disabled_modules'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 58
+system_modules_submit(NULL, $form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 59
+unset($form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 66
+$form_state = array( 'values' => array() );
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 67
+$form_state['values']['name'] = 'test-group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 68
+$form_state['values']['type'] = 'test_group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 69
+$form_state['values']['og_content_type_usage'] = 'group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 70
+drupal_execute('node_type_form',$form_state);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 72
+$form_state = array(  'values'=>array() );
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 73
+$form_state['values']['name'] = 'test-post-group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 74
+$form_state['values']['type'] = 'test_post_group';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 75
+$form_state['values']['og_content_type_usage'] = 'group_post_standard';
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php $form_state at line: 76
+drupal_execute('node_type_form',$form_state);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/scripts/generate-og-ui-d6-content.php
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 106
+function og_ui_membership_links_content_type_edit_form($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 107
+$conf = $form_state['conf'];
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 133
+function og_ui_membership_links_content_type_edit_form_submit($form, &$form_state) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 134
+$form_state['values']['membership_types'] = array_filter($form_state['values']['membership_types']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 136
+foreach (array_keys($form_state['plugin']['defaults']) as $key) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc $form_state at line: 137
+$form_state['conf'][$key] = $form_state['values'][$key];
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/og/og_ui/plugins/content_types/membership_links/membership_links.inc
+=== 
 

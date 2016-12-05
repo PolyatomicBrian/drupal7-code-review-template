@@ -1,0 +1,126 @@
+Static Report for feed_import
+Search type: sql
+==================================================
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 518
+'query' => array(
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 521
+'#description' => t('This SQL query must extract desired information for import. Use ? or :param_name as placeholder for params.'),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module query at line: 527
+'#description' => t('Params will be binded to query. Use one param per line.') . ' ' .
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module query at line: 315
+$name = db_query('SELECT value FROM {variable} WHERE name=:name', array(
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.drush.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.install
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 498
+$query = new EntityFieldQuery();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 499
+$query = $query->entityCondition('entity_type', 'taxonomy_vocabulary')
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 502
+if (empty($query)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 506
+$query = reset($query['taxonomy_vocabulary']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 507
+$vids[$name] = $query->vid;
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 508
+unset($query);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 531
+$query = new EntityFieldQuery();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 532
+$query->entityCondition('entity_type', 'taxonomy_term');
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 533
+$query->propertyCondition('name', $name);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 535
+$query->propertyCondition('vid', $voc);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 537
+$query = $query->execute();
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 538
+if (empty($query)) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php query at line: 542
+return array_keys($query['taxonomy_term']);
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_merge.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc
+=== 
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 246
+$this->items = $this->xpath->query($this->options['parent']);
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 467
+// Require dsn and query.
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 468
+if (empty($this->options['dsn']) || empty($this->options['query'])) {
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 505
+// Prepare query.
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 507
+$this->options['query'],
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc query at line: 511
+// Execute query
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc
+=== 
+

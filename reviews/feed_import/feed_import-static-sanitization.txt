@@ -1,0 +1,46 @@
+Static Report for feed_import
+Search type: sanitization
+==================================================
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1475
+'field_name' => check_plain($name),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1781
+'#title' => check_plain($field),
+
+
+/home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module check_plain at line: 1805
+'#title' => check_plain($field),
+
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.module
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.drush.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/feed_import_base.install
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/filters/feed_import_default_filters.php
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_filter.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_merge.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_abstract.inc
+=== 
+
+[*] End report for /home/cball/projects/sas/drupal/drupal7/contrib/feed_import/feed_import_base/inc/feed_import_readers.inc
+=== 
+

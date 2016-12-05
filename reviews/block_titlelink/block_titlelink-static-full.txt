@@ -1,0 +1,70 @@
+Static Report for block_titlelink
+Search type: full
+==================================================
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 92
+$title_link = trim($form_state['values']['block_titlelink']['title_link']);
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 105
+$block->delta = $form_state['values']['delta'];
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 106
+$url = trim($form_state['values']['block_titlelink']['title_link']);
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 109
+'display' => $form_state['values']['block_titlelink']['display_link'],
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 110
+'title' => $form_state['values']['block_titlelink']['title_link_title'],
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module $form_state['values'] at line: 111
+'target' => $form_state['values']['block_titlelink']['title_link_target'],
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module check_plain at line: 129
+$vars['block']->title_link_title = (isset($data['title'])) ? check_plain($data['title']) : NULL;
+
+
+- /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module eval at line: 141
+$vars['block']->title_link = php_eval($vars['block']->title_link);
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 162
+// Add in the query string if one exists.
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 163
+if (!empty($parsed_url['query'])) {
+
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 164
+$attributes['query'] = $parsed_url['query'];
+
+
+??? /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 310
+$query = "(\/?\?([?a-z0-9". $LINK_ICHARS ."+_|\-\.\/\\\\%=&,$'():;*@\[\]{} ]*))";
+
+
+??? /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 314
+$end = $directories .'?'. $query .'?'. $anchor .'?'.'$/i';
+
+
+??? /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module query at line: 321
+$email_pattern = '/^mailto:'. $user .'@'.'('. $domain .'|'. $ipv4 .'|'. $ipv6 .'|localhost)'. $query .'?$/';
+
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.module
+=== 
+
++ /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.install query at line: 13
+db_query("DELETE FROM {variable} WHERE name LIKE 'block_titlelink_%'");
+
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/block_titlelink/block_titlelink.install
+=== 
+
