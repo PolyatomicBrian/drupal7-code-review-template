@@ -1,0 +1,410 @@
+Static Report for scheduler
+Search type: full
+==================================================
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module query at line: 444
+$result = db_query('SELECT * FROM {scheduler} WHERE nid IN (:nids)', array(':nids' => $nids));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state['values'] at line: 542
+if ($form_state['values']['status']) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['values'] at line: 29
+if (isset($form_state['values']['op']) && $form_state['values']['op'] == t('Preview')) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['values'] at line: 31
+$defaults->publish_on = $publishing_enabled ? $form_state['values']['publish_on'] : NULL;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['values'] at line: 32
+$defaults->unpublish_on = $unpublishing_enabled ? $form_state['values']['unpublish_on'] : NULL;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc query at line: 36
+$query = db_select('scheduler', 's');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc query at line: 37
+$query->fields('s', array('publish_on', 'unpublish_on'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc query at line: 38
+$query->condition('s.nid', $node->nid, '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc query at line: 39
+$defaults = $query->execute()->fetchObject();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss at line: 96
+'#markup' => filter_xss_admin($extra_info),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss_admin at line: 96
+'#markup' => filter_xss_admin($extra_info),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss at line: 133
+'#description' => filter_xss(implode(' ', $descriptions)),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss at line: 143
+$form['scheduler_settings']['publish_on']['#description'] = filter_xss(implode(' ', $descriptions));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss at line: 161
+'#description' => filter_xss(implode(' ', $descriptions)),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc filter_xss at line: 172
+$form['scheduler_settings']['unpublish_on']['#description'] = filter_xss(implode(' ', $descriptions));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['values'] at line: 184
+// Test the input operation against $form_state['values']['delete'] as this
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['values'] at line: 186
+if (isset($form_state['input']['op']) && isset($form_state['values']['delete']) && $form_state['input']['op'] == $form_state['values']['delete']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['input'] at line: 186
+if (isset($form_state['input']['op']) && isset($form_state['values']['delete']) && $form_state['input']['op'] == $form_state['values']['delete']) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.tokens.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules_defaults.inc eval at line: 28
+// Needs double quotes for the newlines to be evaluated.
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules_defaults.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 114
+$form_state['values']['scheduler_date_format'] = trim(preg_replace('/\s+/', ' ', $form_state['values']['scheduler_date_format']));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 119
+$no_punctuation = preg_replace('/[^\w+]/', '', $form_state['values']['scheduler_date_format']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 128
+$time_format = scheduler_get_time_only_format($form_state['values']['scheduler_date_format']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 130
+if ($form_state['values']['scheduler_field_type'] == 'date_popup') {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 144
+if ($form_state['values']['scheduler_allow_date_only']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 145
+$default_time = date_parse($form_state['values']['scheduler_default_time']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 152
+$form_state['values']['scheduler_default_time'] = format_date($unix_time, 'custom', 'H:i:s');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 158
+if ($time_format == '' && !$form_state['values']['scheduler_allow_date_only']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 169
+if (empty($form_state['values']['scheduler_date_popup_minute_increment'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 170
+$form_state['values']['scheduler_date_popup_minute_increment'] = 1;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 176
+$format = $form_state['values']['scheduler_date_format'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['input'] at line: 421
+$form_state['input']['scheduler_lightweight_access_key'] = $new_access_key;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc check_plain at line: 484
+'@date_default_timezone' => check_plain($date_default_timezone),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $_GET at line: 556
+if (!isset($_GET['order']) && !isset($_GET['sort'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $_GET at line: 557
+$_GET['order'] = t('Publish on');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $_GET at line: 558
+$_GET['sort'] = 'ASC';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 561
+$query = db_select('scheduler', 's')->extend('PagerDefault');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 562
+$query->limit(50);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 563
+$query->addJoin('LEFT', 'node', 'n', 's.nid = n.nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 564
+$query->addJoin('LEFT', 'users', 'u', 'u.uid = n.uid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 565
+$query->fields('s', array('nid', 'publish_on', 'unpublish_on'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 566
+$query->fields('n', array('uid', 'status', 'title', 'type', 'status'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 567
+$query->addField('u', 'name');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 575
+$query->condition('n.uid', $args[1], '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 579
+$query = $query->extend('TableSort')->orderByHeader($header);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 580
+$result = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 594
+$ops[] = l(t('edit'), 'node/' . $node->nid . '/edit', array('query' => $destination));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 597
+$ops[] = l(t('delete'), 'node/' . $node->nid . '/delete', array('query' => $destination));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc query at line: 604
+$ops[] = l(t('delete'), 'admin/content/scheduler/delete/' . $node->nid, array('query' => $destination));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc check_plain at line: 610
+($node->type ? check_plain(node_type_get_name($node)) : ''),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 663
+if ($form_state['values']['confirm']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['values'] at line: 664
+$nid = $form_state['values']['nid'];
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc query at line: 25
+* Add the timestamp_field into the SQL query.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc query at line: 31
+function query() {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc query at line: 33
+$this->node_table = $this->query->ensure_table('node', $this->relationship);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc query at line: 35
+$this->field_alias = $this->query->add_field(NULL, 'CASE WHEN (' . $time_field . ' > ' . REQUEST_TIME . ') THEN (' . $time_field . ' - ' . REQUEST_TIME . ') ELSE NULL END', $this->table_alias . '_' . $this->field);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.views.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 22
+$query = db_select('scheduler', 's');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 23
+$query->addField('s', 'nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 24
+$query->addJoin('INNER', 'node', 'n', 's.nid = n.nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 25
+$query->addJoin('INNER', 'users', 'u', 'u.uid = n.uid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 26
+$query->condition('s.publish_on', 0, '>');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 27
+$query->condition('s.publish_on', REQUEST_TIME, '<=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 28
+$query_result = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 30
+while ($node = $query_result->fetchObject()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 111
+$query = db_select('scheduler', 's');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 112
+$query->addField('s', 'nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 113
+$query->addJoin('INNER', 'node', 'n', 's.nid = n.nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 114
+$query->addJoin('INNER', 'users', 'u', 'u.uid = n.uid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 115
+$query->condition('s.unpublish_on', 0, '>');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 116
+$query->condition('s.unpublish_on', REQUEST_TIME, '<=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 117
+$query_result = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc query at line: 119
+while ($node = $query_result->fetchObject()) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 101
+$query = db_select('role_permission', 'r');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 102
+$query->fields('r', array('rid'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 103
+$query->condition('r.permission', 'administer nodes', '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 104
+$query->addJoin('INNER', 'role_permission', 'r2', 'r.rid = r2.rid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 105
+$query->condition('r2.permission', 'schedule (un)publishing of nodes', '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 108
+if ($roles_to_update = $query->execute()->fetchCol()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 111
+$query = db_merge('role_permission');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 112
+$query->key(array(
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 117
+$query->fields(array(
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 122
+$query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 136
+$query = db_select('scheduler', 's');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 137
+$query->addField('s', 'nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 138
+$query->addJoin('INNER', 'node', 'n', 's.nid = n.nid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 139
+$query->condition('n.status', NODE_NOT_PUBLISHED, '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 140
+$query->condition('s.publish_on', 0, '=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 141
+$query->condition('s.unpublish_on', 0, '>');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 142
+$query->condition('s.unpublish_on', REQUEST_TIME, '<');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 145
+if ($nids_to_delete = $query->execute()->fetchCol()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 166
+$query = db_select('role_permission', 'rp')
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install query at line: 173
+if ($rows_to_delete = $query->execute()->fetchCol()) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/plugins/content_types/scheduler_form_pane.inc
+=== 
+
