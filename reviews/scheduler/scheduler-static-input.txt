@@ -1,0 +1,238 @@
+Static Report for scheduler
+Search type: input
+==================================================
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 205
+function scheduler_form_node_type_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 208
+_scheduler_form_node_type_form_alter($form, $form_state);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 214
+function scheduler_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 223
+_scheduler_form_alter($form, $form_state);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 483
+function scheduler_node_validate($node, $form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 489
+if (!empty($form_state['triggering_element']['#submit']) && array_search('node_form_delete_submit', $form_state['triggering_element']['#submit']) !== FALSE) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 542
+if ($form_state['values']['status']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module $form_state at line: 936
+function scheduler_date_popup_pre_validate_alter($element, $form_state, &$input) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 16
+function _scheduler_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 29
+if (isset($form_state['values']['op']) && $form_state['values']['op'] == t('Preview')) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 31
+$defaults->publish_on = $publishing_enabled ? $form_state['values']['publish_on'] : NULL;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 32
+$defaults->unpublish_on = $unpublishing_enabled ? $form_state['values']['unpublish_on'] : NULL;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 181
+function scheduler_date_value_callback(&$element, $input = FALSE, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 184
+// Test the input operation against $form_state['values']['delete'] as this
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 186
+if (isset($form_state['input']['op']) && isset($form_state['values']['delete']) && $form_state['input']['op'] == $form_state['values']['delete']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state at line: 193
+return date_popup_element_value_callback($element, $input, $form_state);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.tokens.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules_defaults.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 111
+function scheduler_admin_validate($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 114
+$form_state['values']['scheduler_date_format'] = trim(preg_replace('/\s+/', ' ', $form_state['values']['scheduler_date_format']));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 119
+$no_punctuation = preg_replace('/[^\w+]/', '', $form_state['values']['scheduler_date_format']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 128
+$time_format = scheduler_get_time_only_format($form_state['values']['scheduler_date_format']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 130
+if ($form_state['values']['scheduler_field_type'] == 'date_popup') {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 144
+if ($form_state['values']['scheduler_allow_date_only']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 145
+$default_time = date_parse($form_state['values']['scheduler_default_time']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 152
+$form_state['values']['scheduler_default_time'] = format_date($unix_time, 'custom', 'H:i:s');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 158
+if ($time_format == '' && !$form_state['values']['scheduler_allow_date_only']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 166
+function scheduler_admin_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 169
+if (empty($form_state['values']['scheduler_date_popup_minute_increment'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 170
+$form_state['values']['scheduler_date_popup_minute_increment'] = 1;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 176
+$format = $form_state['values']['scheduler_date_format'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 232
+function _scheduler_form_node_type_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 387
+function _scheduler_lightweight_cron($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 419
+if (isset($form_state['scheduler_generate_new_key'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 421
+$form_state['input']['scheduler_lightweight_access_key'] = $new_access_key;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 446
+function _scheduler_generate_key($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 447
+// Everything in $form_state is persistent, so we can use a direct attribute.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 448
+$form_state['scheduler_generate_new_key'] = TRUE;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 449
+// Setting $form_state['rebuild'] = TRUE causes the form to be rebuilt again.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 450
+$form_state['rebuild'] = TRUE;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc _GET at line: 556
+if (!isset($_GET['order']) && !isset($_GET['sort'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc _GET at line: 557
+$_GET['order'] = t('Publish on');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc _GET at line: 558
+$_GET['sort'] = 'ASC';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 640
+function _scheduler_delete_row_confirm($form, &$form_state, $nid) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 659
+function _scheduler_delete_row_confirm_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 663
+if ($form_state['values']['confirm']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state at line: 664
+$nid = $form_state['values']['nid'];
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc $form_state at line: 54
+function options_form(&$form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc $form_state at line: 55
+parent::options_form($form, $form_state);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.views.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/plugins/content_types/scheduler_form_pane.inc $form_state at line: 53
+function scheduler_form_pane_node_form_menu_content_type_edit_form($form, &$form_state) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/plugins/content_types/scheduler_form_pane.inc
+=== 
+

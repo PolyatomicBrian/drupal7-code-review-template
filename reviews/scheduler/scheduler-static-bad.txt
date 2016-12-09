@@ -1,0 +1,70 @@
+Static Report for scheduler
+Search type: bad
+==================================================
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module preg_replace at line: 287
+$str = trim(preg_replace('/\s+/', ' ', $str));
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc $form_state['input'] at line: 186
+if (isset($form_state['input']['op']) && isset($form_state['values']['delete']) && $form_state['input']['op'] == $form_state['values']['delete']) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.edit.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.tokens.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules_defaults.inc eval at line: 28
+// Needs double quotes for the newlines to be evaluated.
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules_defaults.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.rules.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc preg_replace at line: 114
+$form_state['values']['scheduler_date_format'] = trim(preg_replace('/\s+/', ' ', $form_state['values']['scheduler_date_format']));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc preg_replace at line: 119
+$no_punctuation = preg_replace('/[^\w+]/', '', $form_state['values']['scheduler_date_format']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc $form_state['input'] at line: 421
+$form_state['input']['scheduler_lightweight_access_key'] = $new_access_key;
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler_handler_field_scheduler_countdown.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.views.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.cron.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/scheduler.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/tests/scheduler_test.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/scheduler/plugins/content_types/scheduler_form_pane.inc
+=== 
+
