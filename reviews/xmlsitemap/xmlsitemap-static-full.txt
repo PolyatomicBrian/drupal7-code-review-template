@@ -1,0 +1,861 @@
+Static Report for xmlsitemap
+Search type: full
+==================================================
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc check_plain at line: 151
+parent::writeElement($name, check_plain((string) $content));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 203
+'loc' => $this->getSitemapUrl('sitemap.xml', array('query' => array('page' => $i))),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 300
+* Implements hook_query_TAG_alter().
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 302
+function xmlsitemap_query_xmlsitemap_link_bundle_access_alter(QueryAlterableInterface $query) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 303
+if ($query instanceof EntityFieldQuery && $entity = $query->getMetaData('entity')) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 304
+$info = $query->getMetaData('entity_info');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 305
+$bundle = $query->getMetaData('bundle');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc query at line: 309
+$query->entityCondition('bundle', $bundle, is_array($bundle) ? 'IN' : '=');
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 56
+$query = db_select('xmlsitemap_sitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 57
+$query->fields('xmlsitemap_sitemap', array('smid'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 58
+$query->extend('TableSort')->orderByHeader($header);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 59
+$smids = $query->execute()->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 117
+$form_state['values']['sitemaps'] = array_filter($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 120
+if (!count($form_state['values']['sitemaps'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 131
+$operation = $form['#operations'][$form_state['values']['operation']];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 134
+$sitemaps = array_filter($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 136
+if (!empty($operation['confirm']) && empty($form_state['values']['confirm'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 153
+$count = count($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_GET at line: 189
+'#href' => isset($_GET['destination']) ? $_GET['destination'] : 'admin/config/search/xmlsitemap',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 211
+// If there are no context options, the $form_state['values']['context']
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 213
+$form_state['values'] += array('context' => array());
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 214
+$existing = xmlsitemap_sitemap_load_by_context($form_state['values']['context']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 215
+if ($existing && $existing->smid != $form_state['values']['smid']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 222
+$sitemap = (object) $form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 231
+$count = (int) db_query("SELECT COUNT(smid) FROM {xmlsitemap_sitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_POST at line: 232
+if ($count === 1 && empty($_POST)) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 252
+xmlsitemap_sitemap_delete($form_state['values']['smid']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 415
+$chunk_size = $form_state['values']['xmlsitemap_chunk_size'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 420
+$base_url = &$form_state['values']['xmlsitemap_base_url'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_POST at line: 443
+if (!$_POST && !variable_get('xmlsitemap_rebuild_needed', FALSE)) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_REQUEST at line: 448
+$_REQUEST += array('destination' => 'admin/config/search/xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 449
+drupal_set_message(t('A rebuild is not necessary. If you are just wanting to regenerate the XML sitemap files, you can <a href="@link-cron">run cron manually</a>.', array('@link-cron' => url('admin/reports/status/run-cron', array('query' => drupal_get_destination())))), 'warning');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state['values'] at line: 490
+$batch = xmlsitemap_rebuild_batch($form_state['values']['entities'], $form_state['values']['save_custom']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc check_plain at line: 519
+$row[] = check_plain($bundle_info['label']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_GET at line: 648
+unset($_GET['destination']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 649
+drupal_goto($admin_path, array('query' => $destination));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $_GET at line: 670
+'#value' => l(t('Cancel'), isset($_GET['destination']) ? $_GET['destination'] : 'admin/config/search/xmlsitemap/settings'),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc query at line: 728
+'#markup' => t('The default XML sitemap settings for this @bundle can be changed <a href="@link-type">here</a>.', array('@bundle' => drupal_strtolower($info['bundle label']), '@link-type' => url($path, array('query' => drupal_get_destination())))),
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 97
+$count_before = db_query("SELECT COUNT(id) FROM {xmlsitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 100
+$count_after = db_query("SELECT COUNT(id) FROM {xmlsitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 137
+$query = new EntityFieldQuery();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 138
+$query->entityCondition('entity_type', $type);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 139
+$query->entityCondition('entity_id', 0, '>');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 140
+$query->addTag('xmlsitemap_link_bundle_access');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 141
+$query->addTag('xmlsitemap_rebuild');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 142
+$query->addMetaData('entity', $type);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 143
+$query->addMetaData('entity_info', $info);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 145
+$query->entityCondition('bundle', $bundles, 'IN');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc query at line: 152
+$results = $query->execute();
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc $_GET at line: 15
+if (!isset($_GET['page']) || !is_numeric($_GET['page'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc $_GET at line: 24
+return (int) $_GET['page'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc $_GET at line: 46
+if (variable_get('xmlsitemap_developer_mode', 0) && isset($_GET['debug'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc eval at line: 88
+'Cache-Control' => 'must-revalidate',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc query at line: 148
+'[jquery]' => base_path() . 'misc/jquery.js',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc query at line: 149
+'[jquery-tablesort]' => base_path() . $module_path . '/xsl/jquery.tablesorter.min.js',
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php check_plain at line: 222
+'video:title' => check_plain($node->title),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php check_plain at line: 223
+'video:description' => isset($node->body[LANGUAGE_NONE][0]['summary']) ? check_plain($node->body[LANGUAGE_NONE][0]['summary']) : check_plain($node->body[LANGUAGE_NONE][0]['value']),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 246
+* Alter the query selecting data from {xmlsitemap} during sitemap generation.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 248
+* @param $query
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 249
+*   A Query object describing the composite parts of a SQL query.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 251
+* @see hook_query_TAG_alter()
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 253
+function hook_query_xmlsitemap_generate_alter(QueryAlterableInterface $query) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 254
+$sitemap = $query->getMetaData('sitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 264
+$query->condition($condition);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php query at line: 284
+db_query("DELETE FROM {mytable} WHERE smid = '%s'", $sitemap->smid);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 74
+'query_xmlsitemap_generate_alter',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 75
+'query_xmlsitemap_link_bundle_access_alter',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 368
+$query = db_select('xmlsitemap_sitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 369
+$query->fields('xmlsitemap_sitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 371
+$query->condition($field, $value);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 374
+$sitemaps = $query->execute()->fetchAllAssoc('smid');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 397
+$smid = db_query_range("SELECT smid FROM {xmlsitemap_sitemap} WHERE smid = :hash", 0, 1, array(':hash' => $hash))->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 557
+$query = db_select('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 558
+$query->fields('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 561
+$query->condition($field, $value);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 564
+$links = $query->execute()->fetchAll(PDO::FETCH_ASSOC);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 606
+$existing = db_query_range("SELECT loc, access, status, lastmod, priority, changefreq, changecount, language FROM {xmlsitemap} WHERE type = :type AND id = :id", 0, 1, array(':type' => $link['type'], ':id' => $link['id']))->fetchAssoc();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 647
+$query = db_update('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 648
+$query->fields($updates);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 650
+$query->condition($field, $value);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 653
+return $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 701
+$query = db_delete('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 703
+$query->condition($field, $value);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 706
+return $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 725
+$query = db_select('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 726
+$query->addExpression('1');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 728
+$query->condition($field, $value);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 730
+$query->range(0, 1);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 731
+$changed = $query->execute()->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 760
+$original_link = db_query_range("SELECT loc, access, status, lastmod, priority, changefreq, changecount, language FROM {xmlsitemap} WHERE type = :type AND id = :id", 0, 1, array(':type' => $link['type'], ':id' => $link['id']))->fetchAssoc();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 998
+$status['indexed'] = db_query("SELECT COUNT(id) FROM {xmlsitemap} WHERE type = :entity AND subtype = :bundle", array(':entity' => $entity_type, ':bundle' => $bundle))->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 999
+$status['visible'] = db_query("SELECT COUNT(id) FROM {xmlsitemap} WHERE type = :entity AND subtype = :bundle AND status = 1 AND access = 1", array(':entity' => $entity_type, ':bundle' => $bundle))->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1017
+* Implements hook_entity_query_alter().
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1021
+function xmlsitemap_entity_query_alter($query) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1022
+$conditions = &$query->entityConditions;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1059
+$variables = db_query("SELECT name FROM {variable} WHERE name LIKE :pattern", array(':pattern' => db_like('xmlsitemap_settings_' . $entity_old . '_') . '%'))->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1194
+$count = db_query("SELECT COUNT(id) FROM {xmlsitemap} WHERE access = 1 AND status = 1")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1262
+foreach ($form_state['values'] as $variable => $value) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1264
+if (is_array($value) && !empty($form_state['values']['array_filter'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1269
+drupal_set_message(t('XML sitemap settings have been modified and the files should be regenerated. You can <a href="@run-cron">run cron manually</a> to regenerate the cached files.', array('@run-cron' => url('admin/reports/status/run-cron', array('query' => drupal_get_destination())))), 'warning', FALSE);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1339
+$link = &$form_state['values']['xmlsitemap'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1363
+if (isset($form_state['values'][$bundle_key])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1364
+$bundle = $form_state['values'][$bundle_key];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1370
+xmlsitemap_link_bundle_settings_save($entity, $bundle, $form_state['values']['xmlsitemap']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state['values'] at line: 1380
+unset($form_state['values']['xmlsitemap']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module query at line: 1551
+$link += array('query' => $destination);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install query at line: 70
+$max_links = db_query("SELECT MAX(links) FROM {xmlsitemap_sitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install query at line: 82
+$max_chunks = db_query("SELECT MAX(chunks) FROM {xmlsitemap_sitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install query at line: 96
+$max_filesize = db_query("SELECT MAX(max_filesize) FROM {xmlsitemap_sitemap}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install query at line: 133
+$requirements['xmlsitemap_generated']['description'] = $t('The XML cached files are out of date and need to be regenerated. You can <a href="@link-cron">run cron manually</a> to regenerate the sitemap files.', array('@link-cron' => url('admin/reports/status/run-cron', array('query' => drupal_get_destination()))));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install query at line: 438
+if (!db_query_range("SELECT 1 FROM {xmlsitemap_sitemap}", 0, 1)->fetchField()) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 14
+* at once so that only one database query is executed instead of several or
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 27
+$aliases[LANGUAGE_NONE] = db_query("SELECT source, alias FROM {url_alias} WHERE language = :language ORDER BY pid", array(':language' => LANGUAGE_NONE))->fetchAllKeyed();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 31
+$aliases[$language] = db_query("SELECT source, alias FROM {url_alias} WHERE language = :language ORDER BY pid", array(':language' => $language))->fetchAllKeyed();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 43
+'query' => array(),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 106
+$aliases = db_query("SELECT COUNT(pid) FROM {url_alias}")->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 171
+$query = db_select('xmlsitemap', 'x');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 172
+$query->fields('x', array('id', 'type', 'subtype', 'loc', 'lastmod', 'changefreq', 'changecount', 'priority', 'language', 'access', 'status'));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 173
+$query->condition('x.access', 1);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 174
+$query->condition('x.status', 1);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 175
+$query->orderBy('x.language', 'DESC');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 176
+$query->orderBy('x.loc');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 177
+$query->addTag('xmlsitemap_generate');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 178
+$query->addMetaData('sitemap', $sitemap);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 182
+$query->range($offset, $limit);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 183
+$links = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 274
+$smids = db_query("SELECT smid FROM {xmlsitemap_sitemap}")->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 321
+$context['message'] = t('Now generating %sitemap-url.', array('%sitemap-url' => url('sitemap.xml', $sitemap->uri['options'] + array('query' => array('page' => $sitemap->chunks)))));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 443
+$query = new EntityFieldQuery();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 444
+$query->entityCondition('entity_type', $entity);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 445
+$query->entityCondition('entity_id', $context['sandbox']['last_id'], '>');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 446
+$query->addTag('xmlsitemap_link_bundle_access');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 447
+$query->addTag('xmlsitemap_rebuild');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 448
+$query->addMetaData('entity', $entity);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 449
+$query->addMetaData('entity_info', $info);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 451
+$query->entityCondition('bundle', $types, 'IN');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 459
+$count_query = clone $query;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 460
+$count_query->count();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 461
+$context['sandbox']['max'] = $count_query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 468
+// PostgreSQL cannot have the ORDERED BY in the count query.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 469
+$query->entityOrderBy('entity_id');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 472
+$query->range(0, $limit);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 474
+$result = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 540
+$query = db_delete('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 541
+$query->condition('type', $types);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 546
+$query->condition('status_override', 0);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 547
+$query->condition('priority_override', 0);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc query at line: 550
+return $query->execute();
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module query at line: 82
+$mlids = db_query_range($sql, 0, $limit, array(':menus' => $menus))->fetchCol();
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module $_GET at line: 36
+if (!empty($_GET['destination'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module $_GET at line: 37
+$commands[] = ctools_ajax_command_redirect($_GET['destination']);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 28
+$nids = db_query_range("SELECT n.nid FROM {node} n LEFT JOIN {xmlsitemap} x ON x.type = 'node' AND n.nid = x.id WHERE x.id IS NULL AND n.type IN (:types) ORDER BY n.nid DESC", 0, $limit, array(':types' => $types))->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 152
+$timestamps[$node->nid] = db_query("SELECT nr.timestamp FROM {node_revision} nr WHERE nr.nid = :nid", array(':nid' => $node->nid))->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 154
+$comment_timestamps = db_query("SELECT c.created FROM {comment} c WHERE c.nid = :nid AND c.status = :status", array(':nid' => $node->nid, ':status' => COMMENT_PUBLISHED))->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 287
+$query = db_select('node_access');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 288
+$query->addExpression('1');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 289
+$query->condition('grant_' . $op, 1, '>=');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 294
+$query->condition($nids);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 295
+$query->range(0, 1);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 317
+$query->condition($grant_condition);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module query at line: 320
+$result = (bool) $query->execute()->fetchField();
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module query at line: 26
+$uids = db_query_range("SELECT u.uid FROM {users} u LEFT JOIN {xmlsitemap} x ON x.type = 'user' AND u.uid = x.id WHERE x.id IS NULL AND u.uid > 0 ORDER BY u.uid DESC", 0, $limit)->fetchCol();
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 24
+$query = db_select('xmlsitemap')
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 27
+$query->fields('xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 28
+$query->condition('type', 'custom');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 29
+$query->limit(25);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 30
+$query->orderByHeader($header);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 31
+$result = $query->execute();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 59
+'#empty' => t('No custom links available.') . ' ' . l(t('Add custom link'), 'admin/config/search/xmlsitemap/custom/add', array('query' => $destination)),
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 70
+'id' => db_query("SELECT MAX(id) FROM {xmlsitemap} WHERE type = 'custom'")->fetchField() + 1,
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state['values'] at line: 135
+$link = &$form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc query at line: 151
+if (db_query_range("SELECT 1 FROM {xmlsitemap} WHERE type <> 'custom' AND loc = :loc AND status = 1 AND access = 1 AND language IN (:languages)", 0, 1, array(':loc' => $link['loc'], ':languages' => array(LANGUAGE_NONE, $link['language'])))->fetchField()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state['values'] at line: 162
+$link = $form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state['values'] at line: 193
+$link = $form_state['values']['link'];
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 65
+* Implements hook_query_TAG_alter().
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 69
+function xmlsitemap_i18n_query_xmlsitemap_generate_alter(QueryAlterableInterface $query) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 71
+$sitemap = $query->getMetaData('sitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 77
+// Get languages to simplify query building.
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 89
+$query->condition('x.language', array($current, LANGUAGE_NONE));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 93
+$query->condition('x.language', array($current, $default, LANGUAGE_NONE));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 97
+$query->condition('x.language', array($default, LANGUAGE_NONE));
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module query at line: 110
+$query->condition($condition);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 38
+$tids = db_query_range("SELECT t.tid FROM {taxonomy_term_data} t INNER JOIN {taxonomy_vocabulary} tv USING (vid) LEFT JOIN {xmlsitemap} x ON x.type = 'taxonomy_term' AND t.tid = x.id WHERE x.id IS NULL AND tv.machine_name IN (:bundles) ORDER BY t.tid DESC", 0, $limit, array(':bundles' => $bundles))->fetchCol();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 205
+if ($parent = db_query("SELECT parent FROM {taxonomy_term_hierarchy} WHERE tid = %d", $term->tid)->fetchField()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 231
+return db_query_range("SELECT COUNT(ti.nid) FROM {taxonomy_index} ti LEFT JOIN {node n} USING (nid) WHERE ti.tid = :tid AND n.status = 1", 0, 1, array(':tid' => $term->tid))->fetchField();
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 235
+* Implements hook_entity_query_alter().
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 239
+function xmlsitemap_taxonomy_entity_query_alter($query) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 240
+$conditions = &$query->entityConditions;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module query at line: 261
+$query->propertyCondition('vid', $vids, $conditions['bundle']['operator']);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc $form_state['values'] at line: 64
+$form_state['values']['xmlsitemap_engines_custom_urls'] = implode("\n", $custom_urls);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.module $_GET at line: 82
+//if ($_GET['q'] == 'admin/config/search/xmlsitemap/engines/submit' && user_access('administer xmlsitemap')) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module query at line: 30
+$engines['simpletest']['url'] = url('ping', array('absolute' => TRUE, 'query' => array('sitemap' => ''))) . '[sitemap]';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module $_GET at line: 34
+if (empty($_GET['sitemap']) || !valid_url($_GET['sitemap'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module $_GET at line: 40
+watchdog('xmlsitemap', 'Recieved ping for @sitemap.', array('@sitemap' => $_GET['sitemap']));
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module
+=== 
+

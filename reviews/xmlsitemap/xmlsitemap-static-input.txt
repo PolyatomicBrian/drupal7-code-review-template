@@ -1,0 +1,449 @@
+Static Report for xmlsitemap
+Search type: input
+==================================================
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 116
+function xmlsitemap_sitemap_list_form_validate($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 117
+$form_state['values']['sitemaps'] = array_filter($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 120
+if (!count($form_state['values']['sitemaps'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 130
+function xmlsitemap_sitemap_list_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 131
+$operation = $form['#operations'][$form_state['values']['operation']];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 134
+$sitemaps = array_filter($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 136
+if (!empty($operation['confirm']) && empty($form_state['values']['confirm'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 139
+$form_state['rebuild'] = TRUE;
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 153
+$count = count($form_state['values']['sitemaps']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 156
+//$form_state['redirect'] = 'admin/config/search/xmlsitemap';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 160
+function xmlsitemap_sitemap_edit_form(array $form, array &$form_state, stdClass $sitemap = NULL) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _GET at line: 189
+'#href' => isset($_GET['destination']) ? $_GET['destination'] : 'admin/config/search/xmlsitemap',
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 210
+function xmlsitemap_sitemap_edit_form_validate($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 211
+// If there are no context options, the $form_state['values']['context']
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 213
+$form_state['values'] += array('context' => array());
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 214
+$existing = xmlsitemap_sitemap_load_by_context($form_state['values']['context']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 215
+if ($existing && $existing->smid != $form_state['values']['smid']) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 220
+function xmlsitemap_sitemap_edit_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 221
+form_state_values_clean($form_state);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 222
+$sitemap = (object) $form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 225
+$form_state['redirect'] = 'admin/config/search/xmlsitemap';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 228
+function xmlsitemap_sitemap_delete_form(array $form, array &$form_state, stdClass $sitemap) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _POST at line: 232
+if ($count === 1 && empty($_POST)) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 251
+function xmlsitemap_sitemap_delete_form_submit($form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 252
+xmlsitemap_sitemap_delete($form_state['values']['smid']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 254
+$form_state['redirect'] = 'admin/config/search/xmlsitemap';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 263
+function xmlsitemap_settings_form($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 413
+function xmlsitemap_settings_form_validate($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 415
+$chunk_size = $form_state['values']['xmlsitemap_chunk_size'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 420
+$base_url = &$form_state['values']['xmlsitemap_base_url'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 432
+function xmlsitemap_settings_form_submit($form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _POST at line: 443
+if (!$_POST && !variable_get('xmlsitemap_rebuild_needed', FALSE)) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _REQUEST at line: 448
+$_REQUEST += array('destination' => 'admin/config/search/xmlsitemap');
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 488
+function xmlsitemap_rebuild_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 490
+$batch = xmlsitemap_rebuild_batch($form_state['values']['entities'], $form_state['values']['save_custom']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 492
+$form_state['redirect'] = 'admin/config/search/xmlsitemap';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 571
+function xmlsitemap_add_link_bundle_settings(array &$form, array &$form_state, $entity, $bundle) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 644
+function xmlsitemap_link_bundle_settings_form(array $form, array &$form_state, array $bundle) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 645
+if (empty($form_state['ajax']) && $admin_path = xmlsitemap_get_bundle_path($bundle['entity'], $bundle['bundle'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _GET at line: 648
+unset($_GET['destination']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc $form_state at line: 656
+xmlsitemap_add_link_bundle_settings($form, $form_state, $bundle['entity'], $bundle['bundle']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc _GET at line: 670
+'#value' => l(t('Cancel'), isset($_GET['destination']) ? $_GET['destination'] : 'admin/config/search/xmlsitemap/settings'),
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc _GET at line: 15
+if (!isset($_GET['page']) || !is_numeric($_GET['page'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc _GET at line: 24
+return (int) $_GET['page'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc _GET at line: 46
+if (variable_get('xmlsitemap_developer_mode', 0) && isset($_GET['debug'])) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1261
+function xmlsitemap_form_submit_flag_regenerate($form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1262
+foreach ($form_state['values'] as $variable => $value) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1264
+if (is_array($value) && !empty($form_state['values']['array_filter'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1338
+function xmlsitemap_process_form_link_options($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1339
+$link = &$form_state['values']['xmlsitemap'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1353
+function xmlsitemap_link_bundle_settings_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1363
+if (isset($form_state['values'][$bundle_key])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1364
+$bundle = $form_state['values'][$bundle_key];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1370
+xmlsitemap_link_bundle_settings_save($entity, $bundle, $form_state['values']['xmlsitemap']);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module $form_state at line: 1380
+unset($form_state['values']['xmlsitemap']);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module $form_state at line: 119
+function xmlsitemap_menu_form_menu_edit_menu_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module $form_state at line: 122
+xmlsitemap_add_link_bundle_settings($form, $form_state, 'menu_link', $menu);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module $form_state at line: 125
+//function xmlsitemap_menu_form_menu_overview_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module $form_state at line: 129
+//function xmlsitemap_menu_menu_overview_form_submit($form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module $form_state at line: 144
+function xmlsitemap_menu_form_menu_edit_item_alter(&$form, $form_state) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module $form_state at line: 28
+$form_state = array(
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module $form_state at line: 32
+$commands = ctools_modal_form_wrapper($form_id, $form_state);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module _GET at line: 36
+if (!empty($_GET['destination'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module _GET at line: 37
+$commands[] = ctools_ajax_command_redirect($_GET['destination']);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module $form_state at line: 120
+function xmlsitemap_node_form_node_type_form_alter(array &$form, array $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module $form_state at line: 123
+xmlsitemap_add_link_bundle_settings($form, $form_state, 'node', $node_type);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module $form_state at line: 133
+function xmlsitemap_node_form_node_form_alter(array &$form, array &$form_state) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module $form_state at line: 99
+function xmlsitemap_user_form_user_profile_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module $form_state at line: 111
+function xmlsitemap_user_form_user_admin_settings_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module $form_state at line: 113
+xmlsitemap_add_link_bundle_settings($form, $form_state, 'user', 'user');
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 65
+function xmlsitemap_custom_edit_link_form($form, &$form_state, $link = array()) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 134
+function xmlsitemap_custom_edit_link_form_validate($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 135
+$link = &$form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 161
+function xmlsitemap_custom_edit_link_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 162
+$link = $form_state['values'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 165
+$form_state['redirect'] = 'admin/config/search/xmlsitemap/custom';
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 168
+function xmlsitemap_custom_delete_link_form($form, &$form_state, array $link) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 192
+function xmlsitemap_custom_delete_link_form_submit($form, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 193
+$link = $form_state['values']['link'];
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc $form_state at line: 197
+$form_state['redirect'] = 'admin/config/search/xmlsitemap/custom';
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module $form_state at line: 37
+function xmlsitemap_i18n_form_xmlsitemap_sitemap_edit_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module $form_state at line: 51
+function xmlsitemap_form_locale_languages_overview_form_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module $form_state at line: 60
+function xmlsitemap_i18n_form_i18n_admin_settings_alter(&$form, $form_state) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module $form_state at line: 63
+function xmlsitemap_taxonomy_form_taxonomy_form_vocabulary_alter(&$form, $form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module $form_state at line: 70
+xmlsitemap_add_link_bundle_settings($form, $form_state, 'taxonomy_term', $form['#vocabulary']->machine_name);
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module $form_state at line: 76
+function xmlsitemap_taxonomy_form_taxonomy_form_term_alter(&$form, $form_state) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.api.php
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc $form_state at line: 56
+function xmlsitemap_engines_validate_custom_urls($element, &$form_state) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc $form_state at line: 64
+$form_state['values']['xmlsitemap_engines_custom_urls'] = implode("\n", $custom_urls);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.install
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.module _GET at line: 82
+//if ($_GET['q'] == 'admin/config/search/xmlsitemap/engines/submit' && user_access('administer xmlsitemap')) {
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.module
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module _GET at line: 34
+if (empty($_GET['sitemap']) || !valid_url($_GET['sitemap'])) {
+
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module _GET at line: 40
+watchdog('xmlsitemap', 'Recieved ping for @sitemap.', array('@sitemap' => $_GET['sitemap']));
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module
+=== 
+
