@@ -1,10 +1,10 @@
-# review template
+# XMLsitemap Review
 
 
 ## Review Metadata
 
     Requested By: Jeff Lyons
-    Reviewed By: Clay, Tristan
+    Reviewed By: Clay, Tristan, Hunter
     Completed On:
     Updates:
     Result: 
@@ -23,7 +23,12 @@ be approved for use in production environments.
 
 ## Description
 
-TODO by reviewer
+The XML sitemap module creates a sitemap that conforms to the sitemaps.org specification.
+This helps search engines to more intelligently crawl a website and keep their results up
+to date. The sitemap created by the module can be automatically submitted to Ask,
+Google, Bing (formerly Windows Live Search), and Yahoo! search engines. The module also
+comes with several submodules that can add sitemap links for content, menu items,
+taxonomy terms, and user profiles.
 
 
 ## Summary Results
@@ -87,12 +92,18 @@ This example uses the xmlsitemap contrib module.
     Narrow the search Priority from 'All' to 'Major'
     
     - Is there anything we should know about?
+    
+      - Nothing of security related note. Just feature requests and normal
+      bugs. All issues have been visited within the last 2 weeks.
 
     Narrow the search Priority from 'Major' to 'Critical'
 
     - Is there anything we should know about?
     - Note the number of issues and whether or not the issues would prevent the
       module from passing review.
+      
+      - Nothing of note. All issues have been visited within the last 2
+      weeks.
 
 *. Download and uncompress the contrib module
 
@@ -141,7 +152,8 @@ remain as part of template.md.
 
 - If a table is created is it removed when the module is uninstalled?
 
-    TODO: answer
+	- Yes, module implements hook_schema() to manage tables. They are
+	automatically uninstalled when module is removed.
     
 - Are global variables used?
 
@@ -156,11 +168,11 @@ fully tested.
 
 - Is eval() or php_eval() functions used?
 
-    TODO: answer
+    No
 
 - Is preg_replace being used?
 
-    TODO: answer
+    Yes, but /e flag is not being used. Should be safe.
 
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code-0/using-php-with-eval-or-drupal_eval
@@ -195,7 +207,8 @@ Include the output from drupal-static-review.py.
 
 - Is user input properly sanitized/Are validation functions used?
 
-    TODO: answer
+    No sanitization functions are used, due to the nature of the module
+    they are unnecessary.
     
 - Is output properly encoded?
 
@@ -203,7 +216,7 @@ Include the output from drupal-static-review.py.
     
 - Is text handled in a secure way? 
 
-    TODO: answer
+    Proper validation is used in admin forms, no arbitrary code possible.
     
     References:
     - https://www.drupal.org/node/28984
@@ -227,7 +240,7 @@ Include the output from drupal-static-review.py.
 
 - Are permissions properly applied?
  
-    TODO: answer
+    Yes
     
 ### CSRF ###
 
@@ -252,3 +265,9 @@ Include the output from drupal-static-review.py.
 
     References:
     - https://api.drupal.org/api/drupal/includes%21errors.inc/7.x
+
+
+### TODO: to properly answer the rest of the questions, submodules xmlsitemap_il8n,
+xmlsitemap_node, xmlsitemap_taxonomy, xmlsitemap_user need to be looked at.
+
+- At present module should be approved. Hunter Kippen 12/11/16

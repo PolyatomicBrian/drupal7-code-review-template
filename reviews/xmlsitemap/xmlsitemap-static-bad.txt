@@ -1,0 +1,93 @@
+Static Report for xmlsitemap
+Search type: bad
+==================================================
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc preg_replace at line: 68
+$options['base_url'] = preg_replace('~^https?:~', '', $options['base_url']);
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.xmlsitemap.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.drush.inc
+=== 
+
+/var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc eval at line: 88
+'Cache-Control' => 'must-revalidate',
+
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.pages.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.api.php
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap.generate.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_menu/xmlsitemap_menu.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_modal/xmlsitemap_modal.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_node/xmlsitemap_node.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_user/xmlsitemap_user.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_custom/xmlsitemap_custom.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_i18n/xmlsitemap_i18n.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_taxonomy/xmlsitemap_taxonomy.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.api.php
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.admin.inc
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.install
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/xmlsitemap_engines.module
+=== 
+
+[*] End report for /var/www/html/drupal-7.50/sites/all/modules/contrib/xmlsitemap/xmlsitemap_engines/tests/xmlsitemap_engines_test.module
+=== 
+
