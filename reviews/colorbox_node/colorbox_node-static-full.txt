@@ -1,0 +1,49 @@
+Static Report for colorbox_node
+Search type: full
+==================================================
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.context.inc
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.module $_GET at line: 96
+if(!isset($_GET['destination'])) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.module $_GET at line: 97
+$_GET['destination'] = $path;
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.module $_GET at line: 99
+drupal_static('colorbox_original_q', $_GET['q']);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.module $_GET at line: 100
+$_GET['q'] = $path;
+
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.module
+=== 
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/colorbox_node.install
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/views/colorbox_node_handler_field_colorbox_node.inc query at line: 80
+* to the query params.
+
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/views/colorbox_node_handler_field_colorbox_node.inc
+=== 
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/views/colorbox_node.views.inc
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/views/colorbox_node_handler_field_colorbox_node_link.inc query at line: 78
+* to the query params.
+
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/views/colorbox_node_handler_field_colorbox_node_link.inc
+=== 
+
+[*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/ctools/plugins/access/is_colorbox_node.inc
+=== 
+
