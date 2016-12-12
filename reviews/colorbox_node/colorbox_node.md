@@ -1,4 +1,4 @@
-# review template
+# colorbox_node
 
 
 ## Review Metadata
@@ -12,13 +12,11 @@
 
 ## Project Information
 
-Modules in alpha, beta, dev or any other release other than production will not
-be approved for use in production environments.
+    Maintenance status: Actively maintained
+    Development status: Under active development
+    Module categories: Content Display, Theme Enhancements
+    Reported installs: 29,670
 
-Maintenance status: Actively maintained
-Development status: Under active development
-Module categories: Content Display, Theme Enhancements
-Reported installs: 29,670
 
 ## Description
 
