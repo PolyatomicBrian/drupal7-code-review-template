@@ -1,6 +1,5 @@
 # XMLsitemap Review
 
-
 ## Review Metadata
 
     Requested By: Jeff Lyons
@@ -20,7 +19,6 @@ be approved for use in production environments.
     Module categories: Drush, Search, Third-party Integration, Utility
     Reported installs: 300,805
 
-
 ## Description
 
 The XML sitemap module creates a sitemap that conforms to the sitemaps.org specification.
@@ -33,8 +31,7 @@ taxonomy terms, and user profiles.
 
 ## Summary Results
 
-TODO by reviewer
-
+Check issues on website/code vulns, put them here
 
 ## Getting Started
 
@@ -44,52 +41,19 @@ appropriately.
 
 Location of contrib modules being Reviewed
 
-    $HOME/projects/sas/drupal/drupal7/contrib
+    - $HOME/tristan/Documents/drupal-contrib
 
 Location of local repos
 
-    - $HOME/projects/sas/gitlab/infosec/drupal-static-review
-    - $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
-
-If you don't already have the drupal-static-review repo, clone it.
-
-    ```
-    cd $HOME/projects/sas/gitlab/infosec-docs
-    git clone https://github.com/clayball/drupal7-static-review.git
-    ```
-
-This example uses the xmlsitemap contrib module.
-
-*. Add a new review directory on a new local branch
-
-    ```
-    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
-    git checkout master
-    git pull origin master
-    git checkout -b xmlsitemap-$USER
-    cd reviews
-    mkdir xmlsitemap
-    cd xmlsitemap
-    cp ../../template/template.md xmlsitemap.md
-    ```
-    Update the template file with details for the contrib module under review.
+    - $HOME/tristan/Documents/drupal-static-review
+    - $HOME/tristan/Documents/drupal7-code-review
 
 *. Review the module on drupal.org (metadata, issues)
 
-    This example uses xmlsitemap.
-
-    https://www.drupal.org/project/xmlsitemap
-
-    Note the 'Project Information'
-
-    Search and review all open bugs for version 7.x
-
-    https://www.drupal.org/project/issues/xmlsitemap?text=&status=Open&priorities=All&categories=1&version=7.x&component=All
-
-    Take a look at the various issues and when they were created and last
-    updated.
-
-    Narrow the search Priority from 'All' to 'Major'
+    2 Critical - little to no impact 
+    18 Major - Potential permissions issue - https://www.drupal.org/node/1817124
+    User's without 'administer xmlsitemap' can edit XML sitemap fieldset page, however a patch has
+    been provided.
     
     - Is there anything we should know about?
     
@@ -212,7 +176,7 @@ Include the output from drupal-static-review.py.
     
 - Is output properly encoded?
 
-    TODO: answer
+    TODO: this one will take a while
     
 - Is text handled in a secure way? 
 
@@ -242,6 +206,7 @@ Include the output from drupal-static-review.py.
  
     Yes
     
+
 ### CSRF ###
 
 - Does the module use the Form API for all requests that modify data?
