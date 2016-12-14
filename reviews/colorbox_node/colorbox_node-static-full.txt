@@ -45,5 +45,4 @@ $_GET['q'] = $path;
 === 
 
 [*] End report for /home/clayw/projects/sas/drupal/drupal7/contrib/colorbox_node/ctools/plugins/access/is_colorbox_node.inc
-=== 
 

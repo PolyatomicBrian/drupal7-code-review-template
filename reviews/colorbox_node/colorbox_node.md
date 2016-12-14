@@ -4,10 +4,10 @@
 ## Review Metadata
 
     Requested By: Ann
-    Reviewed By: Clay, Tristan
-    Completed On:
+    Reviewed By: Tristan, Clay
+    Completed On: 12/12/2016
     Updates:
-    Result: 
+    Result: Passed review 
     
 
 ## Project Information
@@ -20,12 +20,12 @@
 
 ## Description
 
-TODO by reviewer
+Gives the user the ability to display a page inside a colorbox modal without the header and footer.
 
 
 ## Summary Results
 
-TODO by reviewer
+Great job, Tristan! This module looks good.
 
 
 ## Getting Started
@@ -36,60 +36,17 @@ appropriately.
 
 Location of contrib modules being Reviewed
 
-    $HOME/projects/sas/drupal/drupal7/contrib
+    - $HOME/tristan/Documents/drupal-contrib
 
 Location of local repos
 
-    - $HOME/projects/sas/gitlab/infosec/drupal-static-review
-    - $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
-
-If you don't already have the drupal-static-review repo, clone it.
-
-    ```
-    cd $HOME/projects/sas/gitlab/infosec-docs
-    git clone https://github.com/clayball/drupal7-static-review.git
-    ```
-
-This example uses the xmlsitemap contrib module.
-
-*. Add a new review directory on a new local branch
-
-    ```
-    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
-    git checkout master
-    git pull origin master
-    git checkout -b xmlsitemap-$USER
-    cd reviews
-    mkdir xmlsitemap
-    cd xmlsitemap
-    cp ../../template/template.md xmlsitemap.md
-    ```
-    Update the template file with details for the contrib module under review.
+    - $HOME/tristan/Documents/drupal-static-review 
+    - $HOME/tristan/Documents/drupal7-code-review 
 
 *. Review the module on drupal.org (metadata, issues)
 
-    This example uses xmlsitemap.
-
-    https://www.drupal.org/project/xmlsitemap
-
-    Note the 'Project Information'
-
-    Search and review all open bugs for version 7.x
-
-    https://www.drupal.org/project/issues/xmlsitemap?text=&status=Open&priorities=All&categories=1&version=7.x&component=All
-
-    Take a look at the various issues and when they were created and last
-    updated.
-
-    Narrow the search Priority from 'All' to 'Major'
-    
-    - Is there anything we should know about?
-
-    Narrow the search Priority from 'Major' to 'Critical'
-
-    - Is there anything we should know about?
-    - Note the number of issues and whether or not the issues would prevent the
-      module from passing review.
+    1 Critical - little to no impact
+    0 Major - little to no impact
 
 *. Download and uncompress the contrib module
 
@@ -138,11 +95,11 @@ remain as part of template.md.
 
 - If a table is created is it removed when the module is uninstalled?
 
-    TODO: answer
-    
+    None created.
+
 - Are global variables used?
 
-    TODO: answer
+    None used.
 
 ### Arbitrary Code Execution ###
 
@@ -153,11 +110,11 @@ fully tested.
 
 - Is eval() or php_eval() functions used?
 
-    TODO: answer
+    eval() and php_eval() not are used not used.
 
 - Is preg_replace being used?
 
-    TODO: answer
+    preg_repace is not being used.
 
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code-0/using-php-with-eval-or-drupal_eval
@@ -192,16 +149,16 @@ Include the output from drupal-static-review.py.
 
 - Is user input properly sanitized/Are validation functions used?
 
-    TODO: answer
-    
+    User input is properly sanitized.
+
 - Is output properly encoded?
 
-    TODO: answer
-    
+    Output is properly encoded.
+
 - Is text handled in a secure way? 
 
-    TODO: answer
-    
+    Text is handled in a secure way.
+
     References:
     - https://www.drupal.org/node/28984
     - https://www.drupal.org/docs/7/security/writing-secure-code/handle-user-input-with-care
@@ -213,29 +170,28 @@ Include the output from drupal-static-review.py.
 
 - Are all queries parameterized?
 
-    TODO: answer
-    
+    Queries are properly parameterized.
+
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code/overview
     - https://www.drupal.org/docs/7/security/writing-secure-code-0/database-access
-
 
 ### Authorization ###
 
 - Are permissions properly applied?
  
-    TODO: answer
-    
+    Permissions are properly applied.
+
 ### CSRF ###
 
 - Does the module use the Form API for all requests that modify data?
 
-    TODO: answer
-    
+    The module usse the Form API for all requests that modify data.
+
 - Does the module properly follow the Form API documentation?
 
-    TODO: answer
-    
+    The module properly follows the Form API documentation.
+
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code/create-forms-in-a-safe-way-to-avoid-cross-site-request-forgeries
 
@@ -245,7 +201,7 @@ Include the output from drupal-static-review.py.
 - Ensure that all method/function calls that return a value have proper error
   handling and return value checking. 
 
-    TODO: answer
+    Does not appear to..?
 
     References:
     - https://api.drupal.org/api/drupal/includes%21errors.inc/7.x
