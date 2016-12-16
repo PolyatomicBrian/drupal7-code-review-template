@@ -31,7 +31,10 @@ This project is sponsored by the [School of Arts and Sciences][2] at the
 
 ## Getting Started
 
-This is the general process for getting started.
+- Create a new review directory
+
+    ```$ mkdir review/foo-module```
+
 
 - todo
 - todo
