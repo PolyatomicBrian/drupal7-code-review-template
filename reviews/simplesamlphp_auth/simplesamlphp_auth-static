@@ -1,0 +1,113 @@
+Static Report for simplesamlphp_auth
+Search type: full
+==================================================
+
+[*] End report for /home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.rules.inc
+=== 
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module $_REQUEST at line: 132
+if ((isset($_REQUEST['ReturnTo']) && $_REQUEST['ReturnTo']) &&
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module $_REQUEST at line: 133
+(valid_url($_REQUEST['ReturnTo']) && stristr($_REQUEST['ReturnTo'], $base_url))) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module $_REQUEST at line: 135
+$returnto = $_REQUEST['ReturnTo'];
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module check_plain at line: 255
+drupal_set_message(check_plain($msg));
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 261
+// See if we're supposed to re-evaluate role assignments.
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 263
+if (variable_get('simplesamlphp_auth_roleevaleverytime', 0)) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 275
+// No need to evaluate roles, populate the user object.
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 518
+$form['simplesamlphp_auth_grp_user']['simplesamlphp_auth_roleevaleverytime'] = array(
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 520
+'#title' => t('Reevaluate roles every time the user logs in.'),
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 521
+'#default_value' => variable_get('simplesamlphp_auth_roleevaleverytime', 0),
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 822
+* @param $roleruleevaluation
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 823
+*   An array containing the role rule to evaluate.
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 830
+function _simplesamlphp_auth_evaulaterolerule($roleruleevaluation, $attributes) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 831
+_simplesaml_auth_debug(t('Evaluate rule (key=%key,operator=%op,value=%val)', array('%key' => $roleruleevaluation[0], '%op' => $roleruleevaluation[1], '%val' => $roleruleevaluation[2])));
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 833
+if (!array_key_exists($roleruleevaluation[0], $attributes)) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 836
+$attribute = $attributes[$roleruleevaluation[0]];
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 838
+switch ($roleruleevaluation[1]) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 840
+return in_array($roleruleevaluation[2], $attribute);
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 847
+return ($dc[1] == $roleruleevaluation[2]);
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 885
+$roleruleevaluations = explode(';', $roleruledecompose[1]);
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 888
+foreach ($roleruleevaluations AS $roleruleevaluation) {
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 890
+_simplesaml_auth_debug(t('Evaluate role evaulation: %roleruleeval', array('%roleruleeval' => $roleruleevaluation)));
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 892
+$roleruleevaluationdc = explode(',', $roleruleevaluation);
+
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module eval at line: 893
+if (!_simplesamlphp_auth_evaulaterolerule($roleruleevaluationdc, $attributes)) {
+
+
+[*] End report for /home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.module
+=== 
+
+/home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.install eval at line: 40
+variable_del('simplesamlphp_auth_roleevaleverytime');
+
+
+[*] End report for /home/tristan/Desktop//simplesamlphp_auth/simplesamlphp_auth.install
+=== 
+
