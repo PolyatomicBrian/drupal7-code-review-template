@@ -69,31 +69,6 @@ This example uses the xmlsitemap contrib module.
     ```
     Update the template file with details for the contrib module under review.
 
-*. Review the module on drupal.org (metadata, issues)
-
-    This example uses xmlsitemap.
-
-    https://www.drupal.org/project/xmlsitemap
-
-    Note the 'Project Information'
-
-    Search and review all open bugs for version 7.x
-
-    https://www.drupal.org/project/issues/xmlsitemap?text=&status=Open&priorities=All&categories=1&version=7.x&component=All
-
-    Take a look at the various issues and when they were created and last
-    updated.
-
-    Narrow the search Priority from 'All' to 'Major'
-    
-    - Is there anything we should know about?
-
-    Narrow the search Priority from 'Major' to 'Critical'
-
-    - Is there anything we should know about?
-    - Note the number of issues and whether or not the issues would prevent the
-      module from passing review.
-
 *. Download and uncompress the contrib module
 
     ```
@@ -127,7 +102,6 @@ This example uses the xmlsitemap contrib module.
 Now it's time to install the module and try using it. I recommend doing this
 locally and integrating the Drupal installation with an IDE, e.g. PhpStorm.
 You should also install Xdebug and integrate it with PhpStorm.
-
 Below is a list of items to look for when performing a code review. Keep in
 mind that it's not only important to review and validate the correctness of
 existing code, it's also important to consider if a security control or
@@ -141,11 +115,11 @@ remain as part of template.md.
 
 - If a table is created is it removed when the module is uninstalled?
 
-    TODO: answer
-    
+    Doesn't appear to create any tables.
+
 - Are global variables used?
 
-    TODO: answer
+    Global variables are not used.
 
 ### Arbitrary Code Execution ###
 
@@ -156,11 +130,11 @@ fully tested.
 
 - Is eval() or php_eval() functions used?
 
-    TODO: answer
+    eval() / php_eval() not found.
 
 - Is preg_replace being used?
 
-    TODO: answer
+    preg_replace appears to be absent.
 
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code-0/using-php-with-eval-or-drupal_eval
@@ -195,16 +169,15 @@ Include the output from drupal-static-review.py.
 
 - Is user input properly sanitized/Are validation functions used?
 
-    TODO: answer
+    Direct sanitization is not performed though I also don't think it's needed in this instance.
     
 - Is output properly encoded?
 
-    TODO: answer
+    This module does not provide direct output to the user
     
 - Is text handled in a secure way? 
 
-    TODO: answer
-    
+   Text appears to be handled in a safe manner. 
     References:
     - https://www.drupal.org/node/28984
     - https://www.drupal.org/docs/7/security/writing-secure-code/handle-user-input-with-care
@@ -216,8 +189,7 @@ Include the output from drupal-static-review.py.
 
 - Are all queries parameterized?
 
-    TODO: answer
-    
+   Queries are not all parameterized though I don't believe all of them need to be. 
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code/overview
     - https://www.drupal.org/docs/7/security/writing-secure-code-0/database-access
@@ -227,18 +199,18 @@ Include the output from drupal-static-review.py.
 
 - Are permissions properly applied?
  
-    TODO: answer
-    
+   Permissions are applied correctly.
+
 ### CSRF ###
 
 - Does the module use the Form API for all requests that modify data?
 
-    TODO: answer
-    
+   Form API is used.
+ 
 - Does the module properly follow the Form API documentation?
 
-    TODO: answer
-    
+   Yes.
+ 
     References:
     - https://www.drupal.org/docs/7/security/writing-secure-code/create-forms-in-a-safe-way-to-avoid-cross-site-request-forgeries
 
@@ -248,7 +220,7 @@ Include the output from drupal-static-review.py.
 - Ensure that all method/function calls that return a value have proper error
   handling and return value checking. 
 
-    TODO: answer
+    Robust error handling appears to be absent.
 
     References:
     - https://api.drupal.org/api/drupal/includes%21errors.inc/7.x
