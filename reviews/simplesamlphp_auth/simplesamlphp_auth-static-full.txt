@@ -1,0 +1,168 @@
+Static Report for simplesamlphp_auth
+Search type: full
+==================================================
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.inc eval at line: 203
+// See if we're supposed to re-evaluate role assignments.
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.inc eval at line: 204
+if (variable_get('simplesamlphp_auth_roleevaleverytime', 0)) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.inc eval at line: 216
+// No need to evaluate roles, populate the user object.
+
+
+[*] Found 3 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.inc
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php eval at line: 10
+* Whenever a user's roles are evaluated this hook will be called, allowing
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php eval at line: 12
+* evaluated.
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php eval at line: 16
+*   by the role evaluation process, in the format array($rid => $rid)
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php $_GET at line: 96
+if (isset($_GET['destination'])) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php $_GET at line: 99
+$_GET['destination'],
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php query at line: 105
+// Add our redirect URL as a querystring to the full URL.
+
+
+[*] Found 6 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.api.php
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.pages.inc $_REQUEST at line: 69
+if ((isset($_REQUEST['ReturnTo']) && $_REQUEST['ReturnTo']) &&
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.pages.inc $_REQUEST at line: 70
+(valid_url($_REQUEST['ReturnTo']) && stristr($_REQUEST['ReturnTo'], $base_url))) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.pages.inc $_REQUEST at line: 72
+$return_to = $_REQUEST['ReturnTo'];
+
+
+[*] Found 3 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.pages.inc
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.admin.inc eval at line: 173
+$form['simplesamlphp_auth_grp_user']['simplesamlphp_auth_roleevaleverytime'] = array(
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.admin.inc eval at line: 175
+'#title' => t('Reevaluate roles every time the user logs in.'),
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.admin.inc eval at line: 176
+'#default_value' => variable_get('simplesamlphp_auth_roleevaleverytime', 0),
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.admin.inc $form_state['values'] at line: 198
+$new_login_path = $form_state['values']['simplesamlphp_auth_login_path'];
+
+
+[*] Found 4 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.admin.inc
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.install eval at line: 40
+variable_del('simplesamlphp_auth_roleevaleverytime');
+
+
+[*] Found 1 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.install
+=== 
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module query at line: 285
+$link = l($login_name, $login_path, array('query' => $destination));
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module $form_state['values'] at line: 329
+$values = $form_state['values'];
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 555
+* @param array $roleruleevaluation
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 556
+*   An array containing the role rule to evaluate.
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 563
+function _simplesamlphp_auth_evaulaterolerule($roleruleevaluation, $attributes) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 566
+'%key' => $roleruleevaluation[0],
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 567
+'%op' => $roleruleevaluation[1],
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 568
+'%val' => $roleruleevaluation[2],
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 572
+if (!array_key_exists($roleruleevaluation[0], $attributes)) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 575
+$attribute = $attributes[$roleruleevaluation[0]];
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 577
+switch ($roleruleevaluation[1]) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 579
+return in_array($roleruleevaluation[2], $attribute);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 587
+return $dc[1] == $roleruleevaluation[2];
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 591
+$pos = strpos($subattr, $roleruleevaluation[2]);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 637
+$roleruleevaluations = explode(';', $roleruledecompose[1]);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 640
+foreach ($roleruleevaluations as $roleruleevaluation) {
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 643
+watchdog('simplesamlphp_auth', 'Evaluate role evaulation: %roleruleeval', array('%roleruleeval' => $roleruleevaluation), WATCHDOG_DEBUG);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 646
+$roleruleevaluationdc = str_getcsv($roleruleevaluation);
+
+
+/home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module eval at line: 647
+if (!_simplesamlphp_auth_evaulaterolerule($roleruleevaluationdc, $attributes)) {
+
+
+[*] Found 19 hits in /home/clayw/projects/sas/drupal/drupal7/contrib/simplesamlphp_auth/simplesamlphp_auth.module
+=== 
+
+========================================Summary Details
+Total locations found: 36
