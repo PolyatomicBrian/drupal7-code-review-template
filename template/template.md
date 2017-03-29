@@ -30,6 +30,7 @@ TODO by reviewer
 
 TODO by reviewer
 
+<<<<<<< HEAD
 
 ## Getting Started
 
@@ -132,6 +133,16 @@ Below is a list of items to look for when performing a code review. Keep in
 mind that it's not only important to review and validate the correctness of
 existing code, it's also important to consider if a security control or
 mechanism is not being implemented when it should be.
+=======
+---
+
+## General Items & Threat Model
+
+Below is a list of things to look for when performing a code review. Keep in
+mind that when performing a code review it's not only important to review and
+validate the correctness of existing code, it's also important to consider
+if security control or mechanism is not being implemented when it should be.
+>>>>>>> 202a2b1154c8e3dae8e2676ec18cc5e8a810a1a7
 
 Feel free to remove this when the review is complete. However, this should
 remain as part of template.md.
@@ -147,6 +158,10 @@ remain as part of template.md.
 
     TODO: answer
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 202a2b1154c8e3dae8e2676ec18cc5e8a810a1a7
 ### Arbitrary Code Execution ###
 
 The following items, if found, will prevent a module from being approved, full
@@ -229,6 +244,7 @@ Include the output from drupal-static-review.py.
  
     TODO: answer
     
+
 ### CSRF ###
 
 - Does the module use the Form API for all requests that modify data?
