@@ -30,7 +30,6 @@ TODO by reviewer
 
 TODO by reviewer
 
-<<<<<<< HEAD
 
 ## Getting Started
 
@@ -44,13 +43,13 @@ Location of contrib modules being Reviewed
 
 Location of local repos
 
-    - $HOME/projects/gitlab/infosec/drupal-static-review
-    - $HOME/projects/gitlab/infosec-docs/drupal7-code-review
+    - $HOME/projects/git/infosec/drupal-static-review
+    - $HOME/projects/git/infosec-docs/drupal7-code-review
 
 If you don't already have the drupal-static-review repo, clone it.
 
     ```
-    cd $HOME/projects/gitlab/infosec-docs
+    cd $HOME/projects/git/infosec-docs
     git clone https://github.com/clayball/drupal7-static-review.git
     ```
 
@@ -106,7 +105,7 @@ This example uses the xmlsitemap contrib module.
 *. Run phploc on the contrib module directory
 
     ```
-    cd $HOME/projects/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+    cd $HOME/projects/git/infosec-docs/drupal7-code-review/reviews/xmlsitemap
     phploc --names=*.php,*.module,*.install,*.inc \
       ~/projects/drupal/drupal7/contrib/xmlsitemap/ \
       --log-xml=xmlsitemap-loc.xml > xmlsitemap-loc.txt
@@ -117,10 +116,10 @@ This example uses the xmlsitemap contrib module.
 *. Run drupal-static-review and copy/move output to the review directory
 
     ```
-    cd $HOME/projects/gitlab/infosec/drupal-static-review
+    cd $HOME/projects/git/infosec/drupal-static-review
     ./drupal-static-review xmlsitemap
     mv reports/xmlsitemap-static-full.txt \
-      ~/projects/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+      ~/projects/git/infosec-docs/drupal7-code-review/reviews/xmlsitemap
     ```
 
 ## Review Items & Threat Model
@@ -133,8 +132,7 @@ Below is a list of items to look for when performing a code review. Keep in
 mind that it's not only important to review and validate the correctness of
 existing code, it's also important to consider if a security control or
 mechanism is not being implemented when it should be.
-=======
----
+
 
 ## General Items & Threat Model
 
@@ -142,7 +140,6 @@ Below is a list of things to look for when performing a code review. Keep in
 mind that when performing a code review it's not only important to review and
 validate the correctness of existing code, it's also important to consider
 if security control or mechanism is not being implemented when it should be.
->>>>>>> 202a2b1154c8e3dae8e2676ec18cc5e8a810a1a7
 
 Feel free to remove this when the review is complete. However, this should
 remain as part of template.md.
@@ -158,10 +155,7 @@ remain as part of template.md.
 
     TODO: answer
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 202a2b1154c8e3dae8e2676ec18cc5e8a810a1a7
 ### Arbitrary Code Execution ###
 
 The following items, if found, will prevent a module from being approved, full
