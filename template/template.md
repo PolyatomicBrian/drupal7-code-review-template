@@ -39,17 +39,17 @@ appropriately.
 
 Location of contrib modules being Reviewed
 
-    $HOME/projects/sas/drupal/drupal7/contrib
+    $HOME/projects/drupal/drupal7/contrib
 
 Location of local repos
 
-    - $HOME/projects/sas/gitlab/infosec/drupal-static-review
-    - $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
+    - $HOME/projects/gitlab/infosec/drupal-static-review
+    - $HOME/projects/gitlab/infosec-docs/drupal7-code-review
 
 If you don't already have the drupal-static-review repo, clone it.
 
     ```
-    cd $HOME/projects/sas/gitlab/infosec-docs
+    cd $HOME/projects/gitlab/infosec-docs
     git clone https://github.com/clayball/drupal7-static-review.git
     ```
 
@@ -58,7 +58,7 @@ This example uses the xmlsitemap contrib module.
 *. Add a new review directory on a new local branch
 
     ```
-    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review
+    cd $HOME/projects/gitlab/infosec-docs/drupal7-code-review
     git checkout master
     git pull origin master
     git checkout -b xmlsitemap-$USER
@@ -97,7 +97,7 @@ This example uses the xmlsitemap contrib module.
 *. Download and uncompress the contrib module
 
     ```
-    cd $HOME/projects/sas/drupal/drupal7/contrib
+    cd $HOME/projects/drupal/drupal7/contrib
     wget https://ftp.drupal.org/files/projects/xmlsitemap-7.x-2.3.tar.gz
     tar zxvf xmlsitemap-7.x-2.3.tar.gz
     ```
@@ -105,10 +105,10 @@ This example uses the xmlsitemap contrib module.
 *. Run phploc on the contrib module directory
 
     ```
-    cd $HOME/projects/sas/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+    cd $HOME/projects/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
     phploc --names=*.php,*.module,*.install,*.inc \
-      ~/projects/sas/drupal/drupal7/contrib/xmlsitemap/ \
-      --log-csv=xmlsitemap-loc.csv --log-xml=xmlsitemap-loc.xml > xmlsitemap-loc.txt
+      ~/projects/drupal/drupal7/contrib/xmlsitemap/ \
+      --log-xml=xmlsitemap-loc.xml > xmlsitemap-loc.txt
     ```
     The phploc command above will generate three files. We may use the various
     formats at a later date, e.g., for importing into HECTOR.
@@ -116,10 +116,10 @@ This example uses the xmlsitemap contrib module.
 *. Run drupal-static-review and copy/move output to the review directory
 
     ```
-    cd $HOME/projects/sas/gitlab/infosec/drupal-static-review
+    cd $HOME/projects/gitlab/infosec/drupal-static-review
     ./drupal-static-review xmlsitemap
     mv reports/xmlsitemap-static-full.txt \
-      ~/projects/sas/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
+      ~/projects/gitlab/infosec-docs/drupal7-code-review/reviews/xmlsitemap
     ```
 
 ## Review Items & Threat Model
@@ -252,3 +252,5 @@ Include the output from drupal-static-review.py.
 
     References:
     - https://api.drupal.org/api/drupal/includes%21errors.inc/7.x
+
+
